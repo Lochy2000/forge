@@ -1,0 +1,36 @@
+# Python virtual environment
+venv/
+.venv/
+env/
+.env/
+
+# Environment variables / secrets
+.env
+.env.*
+*.env
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# ChromaDB vector database (regenerate with ingest.py)
+chroma_db/
+
+# Generated output
+output/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Pytest / coverage
+.pytest_cache/
+.coverage
+htmlcov/
