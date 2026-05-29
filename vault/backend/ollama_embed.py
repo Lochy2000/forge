@@ -14,7 +14,7 @@ def get_embedding(text: str):
             "model": EMBED_MODEL,
             "prompt": text
         },
-        timeout=120
+        timeout=300
     )
 
     response.raise_for_status()

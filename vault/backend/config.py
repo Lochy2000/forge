@@ -5,6 +5,7 @@ ROOT_DIR = Path(__file__).resolve().parents[1]
 DOCS_DIR = ROOT_DIR / "docs"
 CHROMA_DIR = ROOT_DIR / "chroma_db"
 OUTPUT_DIR = ROOT_DIR / "output"
+MANIFEST_PATH = DOCS_DIR / "manifest.json"
 
 COLLECTION_NAME = "grant_vault"
 

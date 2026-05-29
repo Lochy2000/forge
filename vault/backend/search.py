@@ -40,6 +40,11 @@ def format_results(results: dict) -> list[dict]:
             "document_type": metadata[i].get("document_type"),
             "section_hint": metadata[i].get("section_hint"),
             "sensitivity": metadata[i].get("sensitivity"),
+            "retrieval_intent": metadata[i].get("retrieval_intent"),
+            "grant_scheme": metadata[i].get("grant_scheme"),
+            "quality_signal": metadata[i].get("quality_signal"),
+            "source_type": metadata[i].get("source_type"),
+            "contains_numbers": metadata[i].get("contains_numbers"),
             "distance": distances[i],
         })
 

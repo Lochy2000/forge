@@ -1,0 +1,56 @@
+{
+  "test-docs/Application-Form-for-Grants-Scheme-PDF-v2.pdf": {
+    "grant_scheme": "unknown",
+    "quality_signal": "unknown",
+    "source_type": "funder_published",
+    "sensitivity": "public"
+  },
+  "test-docs/Business-Connect-Good-Application-Guide_2024.pdf": {
+    "grant_scheme": "innovate_uk",
+    "quality_signal": "unknown",
+    "source_type": "funder_published",
+    "sensitivity": "public"
+  },
+  "test-docs/CA_APR2517R10 Communities Fund - Annex 2 Grant Application.pdf": {
+    "grant_scheme": "communities_fund",
+    "quality_signal": "unknown",
+    "source_type": "applicant_written",
+    "sensitivity": "public"
+  },
+  "test-docs/community-activities-grant-application-form-2021-22.pdf": {
+    "grant_scheme": "communities_fund",
+    "quality_signal": "unknown",
+    "source_type": "funder_published",
+    "sensitivity": "public"
+  },
+  "test-docs/Example-Grant-Application-Living-Essentials.pdf": {
+    "grant_scheme": "communities_fund",
+    "quality_signal": "unknown",
+    "source_type": "applicant_written",
+    "sensitivity": "public"
+  },
+  "test-docs/grant-checklist.md": {
+    "grant_scheme": "unknown",
+    "quality_signal": "unknown",
+    "source_type": "internal",
+    "sensitivity": "public"
+  },
+  "grant-guidances.md": {
+    "grant_scheme": "unknown",
+    "quality_signal": "unknown",
+    "source_type": "internal",
+    "sensitivity": "public"
+  },
+  "test-docs/innovate-uk-clean-tech-application-example.md": {
+    "grant_scheme": "innovate_uk",
+    "quality_signal": "successful",
+    "source_type": "applicant_written",
+    "sensitivity": "public"
+  },
+  "test-docs/innovate-uk-smart-grant-guidance-example.md": {
+    "grant_scheme": "innovate_uk",
+    "quality_signal": "unknown",
+    "source_type": "funder_published",
+    "sensitivity": "public"
+  }
+}

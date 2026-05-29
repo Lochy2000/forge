@@ -2,125 +2,25 @@ from datetime import datetime
 from pathlib import Path
 
 from backend.config import OUTPUT_DIR
-from backend.search import search_vault, format_results
+from backend.retrieval_engine import build_context_pack
 
 
-def deduplicate_results(results: list[dict]) -> list[dict]:
-    seen = set()
-    unique = []
-
-    for item in results:
-        key = (
-            item.get("source"),
-            item.get("chunk"),
-            item.get("content")[:120]
-        )
-
-        if key not in seen:
-            seen.add(key)
-            unique.append(item)
-
-    return unique
-
-
-def run_context_searches(task: str) -> dict:
-    """
-    Runs several targeted retrieval searches for one grant-writing task.
-    This is not the final agent workflow yet.
-    It is the local retrieval/context layer that OpenClaw can later call.
-    """
-
-    searches = [
-        {
-            "label": "General relevant context",
-            "query": task,
-            "filter": None,
-            "n_results": 5,
-        },
-        {
-            "label": "Grant guidance",
-            "query": task,
-            "filter": {"document_type": "grant_guidance"},
-            "n_results": 5,
-        },
-        {
-            "label": "Grant application examples",
-            "query": task,
-            "filter": {"document_type": "grant_application"},
-            "n_results": 5,
-        },
-    ]
-
-    lower_task = task.lower()
-
-    if any(word in lower_task for word in ["environment", "carbon", "emissions", "sustainability"]):
-        searches.append({
-            "label": "Environmental impact context",
-            "query": task,
-            "filter": {"section_hint": "environmental_impact"},
-            "n_results": 5,
-        })
-
-    if any(word in lower_task for word in ["risk", "mitigation", "uncertainty"]):
-        searches.append({
-            "label": "Risk mitigation context",
-            "query": task,
-            "filter": {"section_hint": "risk_mitigation"},
-            "n_results": 5,
-        })
-
-    grouped_results = {}
-
-    for search in searches:
-        raw_results = search_vault(
-            query=search["query"],
-            n_results=search["n_results"],
-            where_filter=search["filter"]
-        )
-
-        grouped_results[search["label"]] = format_results(raw_results)
-
-    return grouped_results
-
-
-def build_retrieval_context(task: str) -> str:
-    grouped_results = run_context_searches(task)
-
-    all_items = []
-
-    for items in grouped_results.values():
-        all_items.extend(items)
-
-    unique_items = deduplicate_results(all_items)
-
+def format_context_pack(pack: dict) -> str:
+    task = pack["task"]
+    grant_scheme = pack.get("grant_scheme") or "not specified"
+    section = pack.get("section") or "not specified"
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
     lines = []
-
     lines.append("# Retrieval Context Pack")
     lines.append("")
     lines.append(f"Generated: {timestamp}")
-    lines.append("")
-    lines.append("## Task")
-    lines.append("")
-    lines.append(task)
+    lines.append(f"Task: {task}")
+    lines.append(f"Grant scheme: {grant_scheme}")
+    lines.append(f"Section: {section}")
     lines.append("")
     lines.append("---")
     lines.append("")
-
-    lines.append("## Purpose")
-    lines.append("")
-    lines.append(
-        "This pack organises retrieved grant evidence and guidance for one specific writing or research task. "
-        "It is designed to support later planning, drafting, checking, and OpenClaw orchestration without sending the full document vault to a model."
-    )
-    lines.append("")
-
-    lines.append("## Retrieval Summary")
-    lines.append("")
-    lines.append(f"Total unique retrieved chunks: {len(unique_items)}")
-    lines.append("")
-
     lines.append("## Key Caution Rules")
     lines.append("")
     lines.append("- Do not treat retrieved examples as company facts.")
@@ -128,16 +28,30 @@ def build_retrieval_context(task: str) -> str:
     lines.append("- Do not turn general grant guidance into specific performance claims.")
     lines.append("- Preserve source references so claims can be checked later.")
     lines.append("")
-
     lines.append("---")
     lines.append("")
 
-    for group_name, items in grouped_results.items():
-        lines.append(f"## {group_name}")
+    sections = {
+        "Content": pack.get("content", []),
+        "Style Examples": pack.get("style_examples", []),
+        "Funder Requirements": pack.get("funder_requirements", []),
+        "Evidence": pack.get("evidence", []),
+    }
+
+    total_unique = sum(len(v) for v in sections.values())
+    lines.append(f"Total retrieved chunks: {total_unique}")
+    lines.append("")
+    lines.append("---")
+    lines.append("")
+
+    for section_name, items in sections.items():
+        lines.append(f"## {section_name}")
         lines.append("")
 
         if not items:
             lines.append("No results found.")
+            lines.append("")
+            lines.append("---")
             lines.append("")
             continue
 
@@ -148,7 +62,8 @@ def build_retrieval_context(task: str) -> str:
             lines.append(f"- Chunk: `{item['chunk']}`")
             lines.append(f"- Document type: `{item['document_type']}`")
             lines.append(f"- Section hint: `{item['section_hint']}`")
-            lines.append(f"- Sensitivity: `{item['sensitivity']}`")
+            lines.append(f"- Retrieval intent: `{item.get('retrieval_intent', 'unknown')}`")
+            lines.append(f"- Grant scheme: `{item.get('grant_scheme', 'unknown')}`")
             lines.append(f"- Distance: `{item['distance']}`")
             lines.append("")
             lines.append("```text")
@@ -161,10 +76,11 @@ def build_retrieval_context(task: str) -> str:
 
     lines.append("## Suggested Next Steps")
     lines.append("")
-    lines.append("- Use this pack to identify useful evidence, style patterns, and missing information.")
-    lines.append("- Do not pass all raw chunks to a cloud model unless needed.")
-    lines.append("- For cloud writing, compress this pack into a smaller brief first.")
-    lines.append("- For verification, keep the exact source/chunk references.")
+    lines.append("- Use content results to identify relevant evidence for this task.")
+    lines.append("- Use style examples to understand how similar sections are written.")
+    lines.append("- Use funder requirements to check what the funder explicitly wants.")
+    lines.append("- Use evidence results to ground specific claims in retrieved facts.")
+    lines.append("- Do not pass all raw chunks to a cloud model — compress first.")
     lines.append("")
 
     return "\n".join(lines)
@@ -179,9 +95,7 @@ def save_retrieval_context(task: str, content: str) -> Path:
     ).strip("_")
 
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-
     file_path = OUTPUT_DIR / f"retrieval_context_{timestamp}_{safe_name}.md"
-
     file_path.write_text(content, encoding="utf-8")
 
     return file_path
@@ -197,10 +111,15 @@ def main():
         if task.lower() == "exit":
             break
 
-        context = build_retrieval_context(task)
-        output_path = save_retrieval_context(task, context)
+        grant_scheme = input("Grant scheme (enter to skip): ").strip() or None
+        section = input("Section hint (enter to skip): ").strip() or None
 
-        print("\nRetrieval context created:")
+        pack = build_context_pack(task, grant_scheme=grant_scheme, section=section)
+        content = format_context_pack(pack)
+        output_path = save_retrieval_context(task, content)
+
+        total = sum(len(pack[k]) for k in ["content", "style_examples", "funder_requirements", "evidence"])
+        print(f"\nContext pack created — {total} chunks across 4 retrieval types")
         print(output_path)
 
 
