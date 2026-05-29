@@ -10,5 +10,7 @@ MANIFEST_PATH = DOCS_DIR / "manifest.json"
 COLLECTION_NAME = "grant_vault"
 
 OLLAMA_EMBED_URL = "http://localhost:11434/api/embeddings"
+OLLAMA_CHAT_URL = "http://localhost:11434/api/chat"
 
 EMBED_MODEL = "nomic-embed-text"
+GENERATIVE_MODEL = "qwen2.5:3b"
