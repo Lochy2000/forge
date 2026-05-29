@@ -74,28 +74,23 @@ def has_numbers(text: str) -> bool:
     return any(bool(re.search(p, text, re.IGNORECASE)) for p in patterns)
 
 
-def infer_retrieval_intent(
+def compute_intent_flags(
     source_type: str,
-    document_type: str,
     quality_signal: str,
     chunk_has_numbers: bool
-) -> str:
-    if source_type == "funder_published":
-        return "funder_requirement"
+) -> dict:
+    is_funder_requirement = source_type == "funder_published"
+    is_style_example = source_type == "applicant_written" and quality_signal == "successful"
+    is_factual_claim = is_style_example and chunk_has_numbers
+    is_evidence = chunk_has_numbers and not is_funder_requirement
 
-    if document_type == "grant_application":
-        if quality_signal == "successful":
-            if chunk_has_numbers:
-                return "factual_claim"
-            return "style_example"
-        if chunk_has_numbers:
-            return "evidence"
-        return "content"
-
-    if document_type == "template":
-        return "style_example"
-
-    return "content"
+    return {
+        "is_content": "true",
+        "is_style_example": str(is_style_example).lower(),
+        "is_funder_requirement": str(is_funder_requirement).lower(),
+        "is_factual_claim": str(is_factual_claim).lower(),
+        "is_evidence": str(is_evidence).lower(),
+    }
 
 
 def main():
@@ -144,9 +139,8 @@ def main():
             chunk_text_content = chunk["text"]
             chunk_has_numbers = has_numbers(chunk_text_content)
 
-            retrieval_intent = infer_retrieval_intent(
+            intent_flags = compute_intent_flags(
                 source_type=doc_entry["source_type"],
-                document_type=document_type,
                 quality_signal=doc_entry["quality_signal"],
                 chunk_has_numbers=chunk_has_numbers,
             )
@@ -168,8 +162,8 @@ def main():
                     "quality_signal": doc_entry["quality_signal"],
                     "source_type": doc_entry["source_type"],
                     "sensitivity": doc_entry["sensitivity"],
-                    "retrieval_intent": retrieval_intent,
-                    "contains_numbers": str(chunk_has_numbers),
+                    "contains_numbers": str(chunk_has_numbers).lower(),
+                    **intent_flags,
                 }]
             )
 

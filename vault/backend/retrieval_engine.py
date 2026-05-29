@@ -164,7 +164,7 @@ def retrieve_content(
 ) -> list[dict]:
     """Writing agent: relevant content for a specific section."""
     where = _build_where(
-        {"retrieval_intent": "content"},
+        {"is_content": "true"},
         {"section_hint": section} if section else None,
         {"grant_scheme": grant_scheme} if grant_scheme else None,
     )
@@ -179,7 +179,7 @@ def retrieve_style_examples(
 ) -> list[dict]:
     """Writing and editing agent: how good grants write a specific section."""
     where = _build_where(
-        {"retrieval_intent": "style_example"},
+        {"is_style_example": "true"},
         {"section_hint": section} if section else None,
         {"grant_scheme": grant_scheme} if grant_scheme else None,
     )
@@ -195,7 +195,7 @@ def retrieve_funder_requirements(
 ) -> list[dict]:
     """Requirements and verification agent: what the funder explicitly wants."""
     where = _build_where(
-        {"retrieval_intent": "funder_requirement"},
+        {"is_funder_requirement": "true"},
         {"grant_scheme": grant_scheme} if grant_scheme else None,
         {"section_hint": section} if section else None,
     )
@@ -208,7 +208,7 @@ def retrieve_evidence(
     collection=None
 ) -> list[dict]:
     """Research and verification agent: factual claims with numbers and evidence."""
-    where = {"retrieval_intent": {"$in": ["factual_claim", "evidence"]}}
+    where = {"is_evidence": "true"}
     return _search(query, where_filter=where, collection=collection)
 
 

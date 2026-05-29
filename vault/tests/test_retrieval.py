@@ -144,8 +144,9 @@ def test_metadata_fields():
 
     required_fields = [
         "source", "chunk", "document_type", "section_hint",
-        "grant_scheme", "quality_signal", "source_type",
-        "sensitivity", "retrieval_intent", "contains_numbers",
+        "grant_scheme", "quality_signal", "source_type", "sensitivity",
+        "contains_numbers", "is_content", "is_style_example",
+        "is_funder_requirement", "is_factual_claim", "is_evidence",
     ]
 
     try:
@@ -178,13 +179,13 @@ def test_intent_retrieval():
     print("=" * 60)
 
     checks = [
-        ("retrieve_content", retrieve_content("grant project overview", section=None), "content"),
-        ("retrieve_style_examples", retrieve_style_examples(query="how to write environmental section"), "style_example"),
-        ("retrieve_funder_requirements", retrieve_funder_requirements(query="what funder wants to see"), "funder_requirement"),
-        ("retrieve_evidence", retrieve_evidence("carbon emissions reduction 50%"), None),
+        ("retrieve_content",            retrieve_content("grant project overview"),                   "is_content"),
+        ("retrieve_style_examples",     retrieve_style_examples(query="how to write grant section"),  "is_style_example"),
+        ("retrieve_funder_requirements",retrieve_funder_requirements(query="what funder wants"),      "is_funder_requirement"),
+        ("retrieve_evidence",           retrieve_evidence("carbon emissions reduction 50%"),           "is_evidence"),
     ]
 
-    for fn_name, results, expected_intent in checks:
+    for fn_name, results, flag_field in checks:
         count = len(results)
         print(f"\n  {fn_name}() → {count} results")
 
@@ -193,16 +194,19 @@ def test_intent_retrieval():
             continue
 
         for r in results[:2]:
-            intent = r.get("retrieval_intent", "unknown")
             scheme = r.get("grant_scheme", "unknown")
             dist = r.get("distance")
             dist_str = f"{dist:.1f}" if dist is not None else "None"
-            print(f"    intent={intent:<20} scheme={scheme:<15} dist={dist_str}  source={r.get('source')}")
+            flags = " ".join(
+                k for k in ["is_content","is_style_example","is_funder_requirement","is_factual_claim","is_evidence"]
+                if r.get(k) == "true"
+            )
+            print(f"    flags=[{flags}]  scheme={scheme:<15} dist={dist_str}")
+            print(f"    source={r.get('source')}")
 
-        if expected_intent:
-            intents = [r.get("retrieval_intent") for r in results]
-            matched = sum(1 for i in intents if i == expected_intent)
-            print(f"  Intent match: {matched}/{len(results)} results have intent={expected_intent}")
+        matched = sum(1 for r in results if r.get(flag_field) == "true")
+        status = "PASS" if matched == count else "WARN"
+        print(f"  {status}  {matched}/{count} results have {flag_field}=true")
 
 
 # ─── Test 6: Dynamic n_results ────────────────────────────────────────────────
