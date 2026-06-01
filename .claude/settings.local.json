@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Select-Object FullName)",
+      "Bash(dir \"C:\\\\Users\\\\User\\\\OneDrive\\\\Desktop\\\\projects\\\\Bontaic\\\\openclaw\")",
+      "PowerShell(Get-ChildItem *)",
+      "PowerShell(Get-Command *)",
+      "PowerShell(nvm list *)",
+      "PowerShell(Test-Path *)",
+      "PowerShell(ollama list *)",
+      "PowerShell(npm list *)",
+      "PowerShell(openclaw *)",
+      "PowerShell(Get-Content *)",
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\User\\\\OneDrive\\\\Desktop\\\\projects\\\\Bontaic\\\\openclaw\\\\docs\" -Recurse -Name)"
+    ]
+  }
+}
