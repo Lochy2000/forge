@@ -105,9 +105,19 @@ def compute_intent_flags(
     chunk_has_numbers: bool
 ) -> dict:
     is_funder_requirement = source_type == "funder_published"
-    is_style_example = source_type == "applicant_written" and quality_signal == "successful"
-    is_factual_claim = is_style_example and chunk_has_numbers
-    is_evidence = chunk_has_numbers and not is_funder_requirement
+
+    # Synthetic docs are style examples only — never factual claims
+    # (their specific statistics and references are fabricated for structure demonstration)
+    is_style_example = (
+        source_type == "applicant_written"
+        and quality_signal in ("successful", "synthetic")
+    )
+    is_factual_claim = (
+        source_type == "applicant_written"
+        and quality_signal == "successful"
+        and chunk_has_numbers
+    )
+    is_evidence = chunk_has_numbers and not is_funder_requirement and quality_signal != "synthetic"
 
     return {
         "is_content": "true",

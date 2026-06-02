@@ -55,7 +55,25 @@ If any group returns 0 results, note this explicitly. Do not invent content to f
 
 If distances are consistently above 350 across all results, warn the user that vault context is weak for this section and retrieved content may not be closely relevant.
 
-### Step 3 — Plan the draft structure
+### Step 3 — Score alignment check (before drafting)
+
+Before writing, map each key requirement to a scoring approach. For each requirement in the section spec, ask:
+
+- What does a score of 4 (excellent) look like for this requirement?
+- What evidence from the vault or research pack supports hitting that score?
+- What is missing that would prevent a top score?
+
+Build a brief scoring plan:
+```
+Requirement: "Demonstrate innovation beyond state of the art"
+Score 4 needs: Named competitors + specific quantified advance + cited source
+Available evidence: [LIST what vault returned]
+Gap: [ANYTHING missing that would prevent score 4]
+```
+
+If a requirement has no supporting evidence in the vault or research, flag it to the user before drafting — do not draft a section you cannot ground.
+
+### Step 5 — Plan the draft structure
 
 Before writing, outline the structure based on:
 - The section's key requirements (every requirement must be addressed)
@@ -64,7 +82,7 @@ Before writing, outline the structure based on:
 
 Present the outline to the user if the section is complex (over 300 words) or if the key requirements suggest a specific structure. Ask for confirmation before drafting.
 
-### Step 4 — Write the draft
+### Step 6 — Write the draft
 
 Write the section following these principles:
 
@@ -92,7 +110,7 @@ Write the section following these principles:
 - If a word limit is not set, ask the user for a target before writing
 - Track approximate word count as you write
 
-### Step 5 — Self-check before output
+### Step 7 — Self-check before output
 
 Before showing the draft, run through this checklist internally:
 
@@ -107,7 +125,7 @@ Before showing the draft, run through this checklist internally:
 
 If any check fails, fix it before outputting. Do not output a draft that fails its own checklist.
 
-### Step 6 — Output
+### Step 8 — Output
 
 Present the draft with:
 

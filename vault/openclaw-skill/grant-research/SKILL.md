@@ -193,16 +193,43 @@ Save findings to `grant-research.json` in the workspace:
 
 ## After research is complete
 
-1. **Save** `grant-research.json` to the workspace
+1. **Save** `grant-research.json` to the workspace.
 
-2. **Optionally ingest into the vault** — if research findings are substantial and relevant to future applications, save them as a research note:
+2. **Always save research notes to the vault** — format findings as a markdown file and ingest it so future sessions can retrieve this research without repeating the searches:
+
+   Create `research-notes-[grant_scheme]-[topic].md` with this structure:
+   ```markdown
+   # Research Notes — [GRANT SCHEME] — [TOPIC]
+   Research date: [DATE]
+
+   ## Market findings
+   - [CLAIM]. Source: [URL] ([DATE])
+   - [CLAIM]. Source: [URL] ([DATE])
+
+   ## Policy and regulatory context
+   - [CLAIM]. Source: [URL] ([DATE])
+
+   ## State of the art
+   - [CLAIM]. Source: [URL] ([DATE])
+
+   ## Funder intelligence
+   - [FINDING about funder priorities]. Source: [URL] ([DATE])
+
+   ## Gaps
+   - [What could not be found]
+   ```
+
+   Then ingest it:
    ```
    POST http://localhost:8100/ingest
-   file: [research-notes.md]
+   file: research-notes-[grant_scheme]-[topic].md
    grant_scheme: [scheme]
+   quality_signal: unknown
    source_type: internal
    sensitivity: internal
    ```
+
+   Only include verified Tier 1 or Tier 2 findings in this file — do not persist unverified or single-source claims to the vault.
 
 3. **Present a research summary** to the user:
    - Key findings by category

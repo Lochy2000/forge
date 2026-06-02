@@ -43,7 +43,7 @@
   },
   "test-docs/innovate-uk-clean-tech-application-example.md": {
     "grant_scheme": "innovate_uk",
-    "quality_signal": "successful",
+    "quality_signal": "synthetic",
     "source_type": "applicant_written",
     "sensitivity": "public"
   },
@@ -52,5 +52,53 @@
     "quality_signal": "unknown",
     "source_type": "funder_published",
     "sensitivity": "public"
+  },
+  "guidance/innovate-uk-scoring-criteria.md": {
+    "grant_scheme": "innovate_uk",
+    "quality_signal": "unknown",
+    "source_type": "funder_published",
+    "sensitivity": "public"
+  },
+  "templates/innovation-section-template.md": {
+    "grant_scheme": "unknown",
+    "quality_signal": "unknown",
+    "source_type": "internal",
+    "sensitivity": "public"
+  },
+  "templates/market-need-template.md": {
+    "grant_scheme": "unknown",
+    "quality_signal": "unknown",
+    "source_type": "internal",
+    "sensitivity": "public"
+  },
+  "templates/team-capability-template.md": {
+    "grant_scheme": "unknown",
+    "quality_signal": "unknown",
+    "source_type": "internal",
+    "sensitivity": "public"
+  },
+  "templates/funding-justification-template.md": {
+    "grant_scheme": "unknown",
+    "quality_signal": "unknown",
+    "source_type": "internal",
+    "sensitivity": "public"
+  },
+  "templates/risk-mitigation-template.md": {
+    "grant_scheme": "unknown",
+    "quality_signal": "unknown",
+    "source_type": "internal",
+    "sensitivity": "public"
+  },
+  "company/company-profile-template.md": {
+    "grant_scheme": "unknown",
+    "quality_signal": "unknown",
+    "source_type": "internal",
+    "sensitivity": "internal"
+  },
+  "company/company-profile.md": {
+    "grant_scheme": "unknown",
+    "quality_signal": "unknown",
+    "source_type": "internal",
+    "sensitivity": "internal"
   }
 }
