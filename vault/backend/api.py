@@ -149,6 +149,39 @@ def brief(req: ContextPackRequest):
         raise HTTPException(status_code=500, detail=str(e))
 
 
+# --- Get a specific chunk by source and index ---
+
+@app.get("/chunk")
+def get_chunk(source: str, index: int):
+    """
+    Retrieve a specific chunk by source filename and chunk index.
+    Used by the verification agent to check exact source text for a cited claim.
+    Example: GET /chunk?source=my-grant.pdf&index=5
+    """
+    try:
+        collection = _get_collection()
+        results = collection.get(
+            where={"$and": [{"source": source}, {"chunk": index}]},
+            include=["documents", "metadatas"],
+        )
+        if not results["ids"]:
+            raise HTTPException(
+                status_code=404,
+                detail=f"Chunk {index} from '{source}' not found in vault",
+            )
+        return {
+            "id": results["ids"][0],
+            "source": source,
+            "chunk": index,
+            "content": results["documents"][0],
+            "metadata": results["metadatas"][0],
+        }
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
 # --- Ingest a new document ---
 
 @app.post("/ingest")

@@ -75,6 +75,16 @@ Only call this when a compressed summary is needed. Do not call on every request
 
 ---
 
+### GET /chunk?source={filename}&index={n} — instant
+Retrieve a specific chunk by source filename and chunk index. Used by the verification agent to check exact source text for a cited claim.
+```json
+// response
+{ "id": "abc123", "source": "my-grant.pdf", "chunk": 5, "content": "exact chunk text...", "metadata": { "section_hint": "innovation", "grant_scheme": "innovate_uk", ... } }
+```
+Returns 404 if the chunk is not found.
+
+---
+
 ### POST /ingest — varies (depends on file size)
 Upload a document. Saved to `vault/docs/uploads/`, added to manifest, ingested into ChromaDB.
 ```

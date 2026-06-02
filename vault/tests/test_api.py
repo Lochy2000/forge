@@ -150,7 +150,46 @@ def test_context_pack():
         print(f"  {section}: {len(data.get(section, []))} chunks")
 
 
-# --- Test 5: Ingest ---
+# --- Test 5: Chunk lookup ---
+
+def test_chunk_lookup():
+    print("\n" + "=" * 60)
+    print("TEST 5: GET /chunk")
+    print("=" * 60)
+
+    # Get a known source from stats first
+    r = requests.get(f"{BASE_URL}/stats", timeout=10)
+    sources = r.json().get("sources", [])
+
+    if not sources:
+        print("  SKIP  no sources in vault")
+        return
+
+    source = sources[0]
+    print(f"  Testing with source: {source}")
+
+    # Look up chunk 0 from that source
+    r = requests.get(f"{BASE_URL}/chunk", params={"source": source, "index": 0}, timeout=10)
+    data = r.json()
+
+    _ok("status 200", r.status_code == 200, str(data))
+    _ok("content field present", "content" in data)
+    _ok("metadata field present", "metadata" in data)
+    _ok("source matches", data.get("source") == source)
+    _ok("chunk index matches", data.get("chunk") == 0)
+
+    print(f"\n  content preview: {data.get('content', '')[:100]}...")
+
+    # Test 404 for non-existent chunk
+    r2 = requests.get(
+        f"{BASE_URL}/chunk",
+        params={"source": "nonexistent.pdf", "index": 0},
+        timeout=10,
+    )
+    _ok("404 for missing chunk", r2.status_code == 404)
+
+
+# --- Test 6: Ingest ---
 
 def test_ingest():
     print("\n" + "=" * 60)
@@ -230,6 +269,7 @@ if __name__ == "__main__":
     test_stats()
     test_search()
     test_context_pack()
+    test_chunk_lookup()
     test_ingest()
     test_delete()
 
