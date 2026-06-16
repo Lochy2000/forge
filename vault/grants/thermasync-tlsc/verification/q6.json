@@ -1,0 +1,199 @@
+{
+  "section": "Q6 — Target market and commercialisation",
+  "draft_file": "q6-commercialisation-draft.md",
+  "verified_at": "2026-06-04T13:20:00+01:00",
+  "overall_status": "pass",
+  "claim_results": [
+    {
+      "id": "C1",
+      "claim": "UK district heating market is USD 1.54 billion in 2025, growing at 3.19% CAGR to USD 1.86 billion by 2031 (Mordor Intelligence / Research and Markets, 2025, cross-referenced)",
+      "status": "verified",
+      "source": "grant-research.json finding #1",
+      "vault_text": "UK District Heating Market size was USD 1.54 billion in 2025, estimated to reach USD 1.86 billion by 2031, CAGR 3.19% (2026–2031). Source: Mordor Intelligence — UK District Heating Market. Cross-referenced: Research and Markets gives near-identical figures.",
+      "issue": null,
+      "fix_required": false
+    },
+    {
+      "id": "C2",
+      "claim": "approximately £1.2 billion in sterling",
+      "status": "verified",
+      "source": "grant-research.json finding #1 notes",
+      "vault_text": "Use with conversion: roughly £1.2bn (2025) at GBP/USD ~0.79.",
+      "issue": "Conversion verified: 1.54 × 0.79 ≈ 1.22. Rounded to £1.2bn — correct.",
+      "fix_required": false
+    },
+    {
+      "id": "C3",
+      "claim": "Wider UK heat-network investment potential is estimated at £60–80 billion by 2050 (DESNZ, UK heat networks: market overview, 2024)",
+      "status": "verified",
+      "source": "grant-research.json finding #2",
+      "vault_text": "UK heat network investment potential is estimated at £60–80 billion by 2050. Source: DESNZ — UK heat networks: market overview (gov.uk), 2024.",
+      "issue": null,
+      "fix_required": false
+    },
+    {
+      "id": "C4",
+      "claim": "ThermaSync's internal market analysis (citing Frontier Economics, Heat Network Market Report, 2023) identifies a £340 million-per-year UK serviceable addressable market by 2028",
+      "status": "verified",
+      "source": "company-profile.md chunks 2-4 + Loch's framing instruction (12:20 GMT+1)",
+      "vault_text": "Addressable market size: £340 million per year in the UK by 2028 (Frontier Economics, Heat Network Market Report 2023)",
+      "issue": "Correctly framed per Loch's explicit instruction: 'Cite it as ThermaSync internal market analysis (Frontier Economics, 2023) and don't present it as independently verified'. This was also flagged in grant-research.json gaps as not independently cross-referenced. Honest framing preserved.",
+      "fix_required": false
+    },
+    {
+      "id": "C5",
+      "claim": "~800 networks today, growing under Heat Network Zoning",
+      "status": "verified",
+      "source": "company-profile.md chunk 4",
+      "vault_text": "District heating network operators (currently ~800 networks in the UK, regulated and growing under Heat Network Zoning policy)",
+      "issue": null,
+      "fix_required": false
+    },
+    {
+      "id": "C6",
+      "claim": "Sheffield City Council — paid pilot signed, 240-dwelling network",
+      "status": "verified",
+      "source": "company-profile.md chunks 2-3",
+      "vault_text": "Sheffield City Council: paid pilot agreement signed, covering a 240-dwelling district heating network in S2 postcode.",
+      "issue": null,
+      "fix_required": false
+    },
+    {
+      "id": "C7",
+      "claim": "Brindleyplace Estate, Birmingham — LOI signed, 6-building portfolio, contingent on TRL 7",
+      "status": "verified",
+      "source": "company-profile.md chunk 3",
+      "vault_text": "Brindleyplace Estate (Birmingham): letter of intent signed for 6-building commercial portfolio pilot, subject to TRL 7 validation.",
+      "issue": null,
+      "fix_required": false
+    },
+    {
+      "id": "C8",
+      "claim": "Industrial site operators with process heating and cooling loads above 500 kW",
+      "status": "verified",
+      "source": "company-profile.md chunk 4",
+      "vault_text": "Industrial site operators with process heating and cooling loads above 500 kW",
+      "issue": null,
+      "fix_required": false
+    },
+    {
+      "id": "C9",
+      "claim": "over £1 billion of public capex (HNIP £320m, GHNF £753m, HNES £77m, HNDU £37m — DESNZ 2024)",
+      "status": "verified",
+      "source": "grant-research.json finding #14",
+      "vault_text": "Government heat-network grant pipeline includes HNIP (£320m), GHNF (£268m + £485m additional announced Dec 2023 = £753m), HNES (£77m), HNDU (£37m) — over £1bn in deployed/committed public capex support. Source: DESNZ 2024.",
+      "issue": "Math check: 320 + 753 + 77 + 37 = 1,187. 'Over £1 billion' verified.",
+      "fix_required": false
+    },
+    {
+      "id": "C10",
+      "claim": "Eight named BMS incumbents dominate the UK market (Honeywell, JCI, Schneider, Siemens, Trend, Priva, ABB, Tridium — Carbon Trust DTEM Buyer's Guide, 2024)",
+      "status": "verified",
+      "source": "grant-research.json finding #12",
+      "vault_text": "UK BMS market is dominated by incumbent global players: Honeywell, Johnson Controls, Schneider Electric, Siemens Building Technologies, Trend, Priva, ABB, Eaton, Tridium, alongside UK specialists. Source: Carbon Trust — DTEM Buyer's Guide.",
+      "issue": "Draft selects 8 of 9 listed global players (drops Eaton). Consistent with Q4 list — no cross-section inconsistency. Verified as selection, not invention.",
+      "fix_required": false
+    },
+    {
+      "id": "C11",
+      "claim": "None offer cross-network thermal coordination as a standard product",
+      "status": "verified",
+      "source": "grant-research.json finding #12 notes",
+      "vault_text": "Incumbents focus on building-level optimisation; ThermaSync's network-level coordination is genuinely differentiated.",
+      "issue": null,
+      "fix_required": false
+    },
+    {
+      "id": "C12",
+      "claim": "patent application (GB2024/TH0012) and the 847,000-hour training dataset (held as trade secret)",
+      "status": "verified",
+      "source": "company-profile.md chunks 2-4",
+      "vault_text": "Patents pending: GB2024/TH0012 — filed March 2024 ... Training dataset of 847,000 hours of thermal demand profiles across 23 building types — not publicly available",
+      "issue": null,
+      "fix_required": false
+    },
+    {
+      "id": "C13",
+      "claim": "protect a 12–18 month technology lead",
+      "status": "analytical_inference_flagged",
+      "source": "Forge inference + style-example precedent",
+      "vault_text": "Style example (GreenFlux): '18-month technology lead estimated based on competitor roadmaps'",
+      "issue": "Forward-looking competitive estimate. Style-example precedent uses '18-month technology lead'. Range 12-18 months is defensible. Flagged as inference.",
+      "fix_required": false
+    },
+    {
+      "id": "C14",
+      "claim": "Sarah Chen — MBA Warwick, 8 years in energy consultancy at Atkins and WSP delivering 14 UK district heating feasibility studies, contributing author of the CIBSE Heat Networks Code of Practice (2021)",
+      "status": "verified",
+      "source": "company-profile.md chunks 5-6",
+      "vault_text": "Sarah Chen — Head of Commercial. Qualifications: MBA, Warwick Business School (2017). BEng Building Services Engineering, Cardiff University (2012). Relevant experience: 8 years in energy consultancy at Atkins and WSP, specialising in heat network feasibility and commercial structuring. Delivered feasibility studies for 14 district heating projects across the UK. Grant-relevant credentials: Contributing author, CIBSE Heat Networks Code of Practice (2021).",
+      "issue": null,
+      "fix_required": false
+    },
+    {
+      "id": "C15",
+      "claim": "first wave of Heat Network Zoning designations (2025–2027 rollout) creates a target set of named district networks",
+      "status": "analytical_inference_flagged",
+      "source": "Forge inference from Zoning timing",
+      "vault_text": "Heat Network Zoning... introduced under the Energy Act 2023 and launched in 2025... designates zones... empowering local authorities to mandate connections (research finding #7)",
+      "issue": "Forward-looking. Timing window (2025-2027) is a defensible read of the rollout pipeline. Flagged as inference.",
+      "fix_required": false
+    },
+    {
+      "id": "C16",
+      "claim": "Target five paid commercial deployments via the BMS-retrofit subcontractor route",
+      "status": "analytical_inference_flagged",
+      "source": "Forge plan inference",
+      "vault_text": null,
+      "issue": "Forward-looking Phase 2 ramp target. Style-example precedent (GreenFlux) used a similar 'Phase 2: commercial partnership' framing. Five deployments is a defensible target but should ideally be backed by Sarah Chen's pipeline view. Flagged for team confirmation but acceptable as a Phase 2 commitment.",
+      "fix_required": false
+    }
+  ],
+  "requirements_coverage": [
+    {
+      "requirement": "Strong understanding of potential markets",
+      "status": "addressed",
+      "notes": "Three independent sources cited: Mordor/Research and Markets (cross-referenced) for UK DH; DESNZ for £60-80bn investment potential; ThermaSync/Frontier for £340m SAM. Heat + cooling scope included per Loch's instruction."
+    },
+    {
+      "requirement": "Demonstrated business skills and planning",
+      "status": "addressed",
+      "notes": "Sarah Chen named with specific credentials. Phase 1/2/3 route to market explicitly laid out. Recurring revenue model (hardware + SaaS licence) defined."
+    },
+    {
+      "requirement": "Target market and customer base clearly researched and defined",
+      "status": "addressed",
+      "notes": "Three customer segments named with size estimates and anchor accounts (Sheffield, Brindleyplace). Initial post-project entry segments specified."
+    }
+  ],
+  "red_flags_found": [],
+  "red_flag_checks": [
+    {
+      "red_flag": "Vague or oversized TAM with no segmentation",
+      "triggered": false,
+      "notes": "Three layered figures (£1.2bn UK DH market, £60-80bn investment potential by 2050, £340m SAM by 2028) with clear segmentation. £340m honestly framed as internal analysis."
+    },
+    {
+      "red_flag": "No identified initial customer segment",
+      "triggered": false,
+      "notes": "Sheffield and Brindleyplace named as anchors; segments 1 and 2 specified as initial focus."
+    },
+    {
+      "red_flag": "Missing business-model / route-to-market detail",
+      "triggered": false,
+      "notes": "Phase 1/2/3 with timings, target deployment count, channel-partnership strategy, and revenue model (hardware + SaaS licence) all stated."
+    }
+  ],
+  "cross_section_conflicts": [],
+  "cross_section_notes": "Consistent with Q4 (BMS incumbent list, GB2024/TH0012, 847k-hour dataset, Sheffield + Brindleyplace anchors, 18-month project) and Q5 (£400k scope implied by per-node licensing model in Q6 — Q9 will need to itemise). No conflicts.",
+  "summary": {
+    "total_claims": 16,
+    "verified": 12,
+    "analytical_inferences_flagged": 4,
+    "overstated": 0,
+    "number_mismatch": 0,
+    "hallucinations": 0,
+    "requirements_missing": 0,
+    "red_flags_triggered": 0
+  }
+}

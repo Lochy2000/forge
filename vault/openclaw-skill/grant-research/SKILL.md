@@ -8,14 +8,31 @@ metadata: {"openclaw":{"emoji":"🔬"}}
 
 Gather and verify public evidence to support a grant application. Every finding must be sourced, dated, and cross-referenced before it can be used in a draft. Unverified statistics in a grant application damage credibility with funders.
 
+## Delegation
+
+Run this entire skill inside one isolated sub-agent
+(`sessions_spawn`, `model: "anthropic/claude-sonnet-4-6"`,
+`context: "isolated"`). This is the single biggest context consumer in the
+pipeline — multiple search/extract rounds across several evidence categories
+— so keeping it out of the orchestrator's session is the highest-value
+isolation change.
+
+The orchestrator's job is just to spawn the sub-agent with the grant slug and
+folder path (`vault/grants/<slug>/`) and call `sessions_yield`. The sub-agent
+reads `requirements.json` itself, runs the full research pass below
+including the vault ingestion, writes `research.json` and
+`research-notes.md`, and returns a short summary plus any `flags.json`
+entries for the orchestrator to append.
+
 ## Prerequisites
 
-- `grant-requirements.json` must exist — run `requirement-extraction` first
+- `vault/grants/<slug>/requirements.json` must exist — run
+  `requirement-extraction` first
 - Read it to understand what evidence is needed before planning any searches
 
 ## Research planning
 
-Before searching, build a research plan from `grant-requirements.json`.
+Before searching, build a research plan from `requirements.json`.
 
 Extract:
 - The `evidence_needed` list — these are the minimum required findings
@@ -142,8 +159,12 @@ Only use Tier 3 sources if Tier 1/2 are unavailable, and flag them clearly.
 
 For any statistic that will be cited in the grant:
 - Find it in at least 2 independent sources
-- If sources conflict, record both figures and flag the conflict — do not choose one silently
-- If only 1 source exists, note it as single-source and flag for the user
+- If sources conflict, **resolve automatically** using this order, and record
+  both figures plus the resolution (see "Handling conflicts" below):
+  1. Prefer the Tier 1 source over Tier 2/3
+  2. If tied on tier, prefer the more recent source
+  3. If still tied, prefer the UK-specific figure over a global/EU one
+- If only 1 source exists, note it as single-source in `low_confidence_items`
 
 Statistics that require cross-referencing:
 - Market size figures
@@ -152,14 +173,41 @@ Statistics that require cross-referencing:
 - Cost or price benchmarks
 - Technical performance claims
 
+## Handling conflicts
+
+When two sources conflict on a statistic, do not stop and ask. Apply the
+resolution order above, record the conflict with the chosen figure in
+`research.json`'s `conflicts` array, and add a `flags.json` entry so the user
+can review the choice later:
+
+```json
+{
+  "id": "flag-00N",
+  "timestamp": "<ISO timestamp>",
+  "skill": "grant-research",
+  "section": null,
+  "category": "source_conflict",
+  "description": "Market size: gov.uk (2025) says £X, statista (2024) says £Y",
+  "default_action_taken": "Used £X (Tier 1, gov.uk) — see research.json conflicts[]",
+  "severity": "medium",
+  "needs_human_review": true,
+  "resolved": false
+}
+```
+
+A conflict between two Tier-1 sources, or one that the resolution order
+cannot break (same tier, same recency, both UK-specific), gets
+`severity: "high"` — these are the ones most worth a second look in
+`grant-review`.
+
 ## Research output format
 
-Save findings to `grant-research.json` in the workspace:
+Save findings to `vault/grants/<slug>/research.json`:
 
 ```json
 {
   "research_date": "[today's date]",
-  "grant_scheme": "[from grant-requirements.json]",
+  "grant_scheme": "[from requirements.json]",
   "findings": [
     {
       "category": "market_size",
@@ -183,7 +231,14 @@ Save findings to `grant-research.json` in the workspace:
     "Could not find UK-specific data on X — only global figures available"
   ],
   "conflicts": [
-    "Source A (gov.uk) states X, Source B (statista) states Y — use with caution"
+    {
+      "claim_a": "exact claim text",
+      "source_a": "name/url/tier",
+      "claim_b": "exact claim text",
+      "source_b": "name/url/tier",
+      "resolution": "Used claim_a — Tier 1 preferred over Tier 2",
+      "chosen": "a"
+    }
   ],
   "low_confidence_items": [
     "Claim X is single-source only (Tier 3) — flag to user before using in draft"
@@ -193,13 +248,13 @@ Save findings to `grant-research.json` in the workspace:
 
 ## After research is complete
 
-1. **Save** `grant-research.json` to the workspace.
+1. **Save** `research.json` to `vault/grants/<slug>/research.json`.
 
 2. **Always save research notes to the vault** — format findings as a markdown file and ingest it so future sessions can retrieve this research without repeating the searches:
 
-   Create `research-notes-[grant_scheme]-[topic].md` with this structure:
+   Create `vault/grants/<slug>/research-notes.md` with this structure:
    ```markdown
-   # Research Notes — [GRANT SCHEME] — [TOPIC]
+   # Research Notes — [GRANT SCHEME] — [PROJECT]
    Research date: [DATE]
 
    ## Market findings
@@ -222,7 +277,7 @@ Save findings to `grant-research.json` in the workspace:
    Then ingest it:
    ```
    POST http://localhost:8100/ingest
-   file: research-notes-[grant_scheme]-[topic].md
+   file: vault/grants/<slug>/research-notes.md
    grant_scheme: [scheme]
    quality_signal: unknown
    source_type: internal
@@ -231,24 +286,28 @@ Save findings to `grant-research.json` in the workspace:
 
    Only include verified Tier 1 or Tier 2 findings in this file — do not persist unverified or single-source claims to the vault.
 
-3. **Present a research summary** to the user:
+3. **Return a summary to the orchestrator** (not the user directly — this
+   runs in an isolated sub-agent):
    - Key findings by category
    - Source quality overview (how many Tier 1/2/3 sources used)
-   - Gaps that could not be filled
-   - Conflicts the user needs to resolve
-   - Any statistics that are single-source only
+   - Every entry in `gaps` and `conflicts`, each as a proposed `flags.json`
+     entry (category `research_gap` for gaps, `source_conflict` for
+     conflicts — see above for the conflict entry shape; use the same shape
+     with `category: "research_gap"` and `severity: "low"` for gaps)
+   - Any single-source statistics from `low_confidence_items`
 
-4. **Ask the user** before proceeding to writing:
-   - Are there any gaps they can fill from internal knowledge?
-   - Are there any conflicts they can resolve?
-   - Are there specific sources they want checked that were missed?
+   The orchestrator appends these to `vault/grants/<slug>/flags.json` and
+   proceeds straight to `grant-writing` — research gaps and conflicts do not
+   block drafting. `grant-writing` will insert `[INSERT: ...]` placeholders
+   for anything genuinely missing, and `grant-review` surfaces everything
+   logged here at the end.
 
 ## Rules
 
 - Never use a statistic in a grant draft without a URL, source name, and date
-- Never silently choose between conflicting sources — always flag and ask
 - Never present global figures as UK figures without noting the distinction
 - Never use a statistic older than 3 years for market or technology claims without flagging it
 - Always check the funder's own website — their stated priorities should inform every section
-- If a key evidence item cannot be found at Tier 1 or 2, tell the user rather than substituting a weaker source
-- Research findings in `grant-research.json` are the source of truth for public evidence — the vault is for private/historical evidence
+- If a key evidence item cannot be found at Tier 1 or 2, record it in `gaps` rather than substituting a weaker source silently
+- When sources conflict, resolve using the documented order, record both figures and the resolution, and log a `flags.json` entry — never pick silently and never stop to ask
+- `research.json` is the source of truth for public evidence — the vault is for private/historical evidence

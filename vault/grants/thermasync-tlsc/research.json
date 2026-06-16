@@ -1,0 +1,223 @@
+{
+  "research_date": "2026-06-03",
+  "grant_scheme": "innovate_uk",
+  "findings": [
+    {
+      "category": "market_size",
+      "claim": "UK District Heating Market size was USD 1.54 billion in 2025, estimated to reach USD 1.86 billion by 2031, CAGR 3.19% (2026–2031).",
+      "source_name": "Mordor Intelligence — UK District Heating Market",
+      "source_url": "https://www.mordorintelligence.com/industry-reports/united-kingdom-district-heating-market",
+      "source_date": "2025",
+      "source_tier": 2,
+      "cross_referenced": true,
+      "second_source_url": "https://www.researchandmarkets.com/report/united-kingdom-district-heating-market",
+      "uk_specific": true,
+      "notes": "Research and Markets gives near-identical figures (USD 1.54bn 2025 → USD 1.80bn 2030, CAGR 3.2%) — strong cross-reference. Use with conversion: roughly £1.2bn (2025) at GBP/USD ~0.79."
+    },
+    {
+      "category": "market_size",
+      "claim": "UK heat network investment potential is estimated at £60–80 billion by 2050.",
+      "source_name": "DESNZ — UK heat networks: market overview (gov.uk)",
+      "source_url": "https://www.gov.uk/government/publications/uk-heat-networks-market-overview/uk-heat-networks-market-overview-accessible-webpage",
+      "source_date": "2024",
+      "source_tier": 1,
+      "cross_referenced": false,
+      "second_source_url": null,
+      "uk_specific": true,
+      "notes": "Government-published headline figure attributed to the Heat Networks Industry Council. Tier 1 source, single primary source but authoritative."
+    },
+    {
+      "category": "market_size",
+      "claim": "Heat networks supply less than 3% of UK heat in 2022/2024; the Climate Change Committee Net Zero scenario targets ~20% market share by 2050. Heat from networks expected to rise from 12.9 TWh (2020) to 95 TWh (2050).",
+      "source_name": "DESNZ — UK heat networks: market overview (gov.uk)",
+      "source_url": "https://www.gov.uk/government/publications/uk-heat-networks-market-overview/uk-heat-networks-market-overview-accessible-webpage",
+      "source_date": "2024",
+      "source_tier": 1,
+      "cross_referenced": false,
+      "second_source_url": null,
+      "uk_specific": true,
+      "notes": "Underlying source is Climate Change Committee Net Zero scenario — Tier 1. Useful for arguing rapid sector growth headroom."
+    },
+    {
+      "category": "market_size",
+      "claim": "Heat networks could deliver UK CO2 savings rising from 1.4 Mtonnes (2020) to 15 Mtonnes (2050).",
+      "source_name": "DESNZ — UK heat networks: market overview (gov.uk), Heat Networks Industry Council estimates",
+      "source_url": "https://www.gov.uk/government/publications/uk-heat-networks-market-overview/uk-heat-networks-market-overview-accessible-webpage",
+      "source_date": "2024",
+      "source_tier": 1,
+      "cross_referenced": false,
+      "second_source_url": null,
+      "uk_specific": true,
+      "notes": "Useful for Q7 environmental impact framing."
+    },
+    {
+      "category": "policy_context",
+      "claim": "Heat in buildings is 37% of total UK emissions (468 MtCO2e total): space heating 17%, industrial heat 14%, hot water 4%, cooking 2%.",
+      "source_name": "DESNZ — UK heat networks: market overview (gov.uk)",
+      "source_url": "https://www.gov.uk/government/publications/uk-heat-networks-market-overview/uk-heat-networks-market-overview-accessible-webpage",
+      "source_date": "2024",
+      "source_tier": 1,
+      "cross_referenced": false,
+      "second_source_url": null,
+      "uk_specific": true,
+      "notes": "Strong anchor stat for Q4 (problem definition) and Q7 (impact)."
+    },
+    {
+      "category": "policy_context",
+      "claim": "The Heat Networks (Market Framework) (Great Britain) Regulations 2025 establish Ofgem, Citizens Advice, Consumer Scotland and the Energy Ombudsman in the heat network market, regulating district and communal heat networks as a utility for the first time.",
+      "source_name": "legislation.gov.uk — The Heat Networks (Market Framework) (GB) Regulations 2025",
+      "source_url": "https://www.legislation.gov.uk/ukdsi/2025/9780348266474",
+      "source_date": "2025",
+      "source_tier": 1,
+      "cross_referenced": true,
+      "second_source_url": "https://www.gov.uk/government/publications/heat-network-zoning-overview/heat-network-zoning-overview",
+      "uk_specific": true,
+      "notes": "Primary regulatory text. Strong policy tailwind for ThermaSync — heat networks are becoming a regulated utility with minimum technical standards."
+    },
+    {
+      "category": "policy_context",
+      "claim": "Heat Network Zoning, introduced under the Energy Act 2023 and launched in 2025, designates zones where heat networks are the lowest-cost low-carbon heat option, empowering local authorities to mandate connections.",
+      "source_name": "GOV.UK — Heat network zoning collection",
+      "source_url": "https://www.gov.uk/government/collections/heat-network-zoning",
+      "source_date": "2025",
+      "source_tier": 1,
+      "cross_referenced": true,
+      "second_source_url": "https://www.legislation.gov.uk/ukdsi/2025/9780348266474",
+      "uk_specific": true,
+      "notes": "Confirms a regulatory pipeline of designated zones over the next 5 years — direct addressable demand expansion for ThermaSync's controllers."
+    },
+    {
+      "category": "policy_context",
+      "claim": "The Clean Flexibility Roadmap, published 23 July 2025 by DESNZ jointly with NESO and Ofgem, sets out flexibility measures and milestones required for Clean Power 2030 and net zero by 2050. NESO will set a public target by end-December 2025 for non-domestic consumer flexibility capacity additions every year to 2030.",
+      "source_name": "DESNZ / NESO / Ofgem — Clean Flexibility Roadmap (gov.uk)",
+      "source_url": "https://assets.publishing.service.gov.uk/media/68874ddeb0e1dfe5b5f0e431/clean-flexibility-roadmap.pdf",
+      "source_date": "2025-07",
+      "source_tier": 1,
+      "cross_referenced": true,
+      "second_source_url": "https://www.neso.energy/industry-information/flexibility/clean-flexibility-roadmap",
+      "uk_specific": true,
+      "notes": "Critical Q5/Q6 anchor — places ThermaSync directly in the national flexibility strategy. PDF binary couldn't be text-extracted; data via WebSearch synthesis and NESO landing page."
+    },
+    {
+      "category": "policy_context",
+      "claim": "The Demand Flexibility Service (DFS) evolved from a seasonal winter product to an all-year-round service on 27 November 2024. By end-March 2025, 28 providers had registered 1.98 million MPANs. Winter 2024/25: 10,983.5 MWh bids, 5,449.6 MWh accepted, £1.22m in accepted tenders.",
+      "source_name": "NESO — Demand Flexibility Service",
+      "source_url": "https://www.neso.energy/industry-information/balancing-services/demand-flexibility-service-dfs",
+      "source_date": "2025",
+      "source_tier": 1,
+      "cross_referenced": true,
+      "second_source_url": "https://www.neso.energy/nearly-2-million-households-and-businesses-registered-demand-flexibility-service-dfs-last-winter",
+      "uk_specific": true,
+      "notes": "Demonstrates real, scaled commercial flexibility market — useful for Q6 commercialisation route."
+    },
+    {
+      "category": "state_of_art",
+      "claim": "Advanced demand management with 2–3 hour ahead thermal demand forecasting can deliver an average 25% reduction in the thermal load of individual buildings.",
+      "source_name": "Demand side management in district heating systems by innovative control — ResearchGate",
+      "source_url": "https://www.researchgate.net/publication/335624058_Demand_side_management_in_district_heating_systems_by_innovative_control",
+      "source_date": "2019",
+      "source_tier": 1,
+      "cross_referenced": false,
+      "second_source_url": null,
+      "uk_specific": false,
+      "notes": "Independent literature support for ThermaSync's claimed ~23% peak reduction — flag that the 23% is internal/simulated and that academic literature shows similar magnitudes are achievable. Source not UK-specific."
+    },
+    {
+      "category": "state_of_art",
+      "claim": "Shifting hot-water heat-pump generation using heat storage could cut peak GB electricity demand by 7 GW (5%); adding 20% space-heating shifting brings a further 10% peak reduction.",
+      "source_name": "Assessing the ability of electrified domestic heating in the UK to provide unplanned, short-term responsive demand — ScienceDirect",
+      "source_url": "https://www.sciencedirect.com/science/article/abs/pii/S0378778821007143",
+      "source_date": "2021",
+      "source_tier": 1,
+      "cross_referenced": false,
+      "second_source_url": null,
+      "uk_specific": true,
+      "notes": "UK-specific peer-reviewed evidence that thermal load-shifting at scale moves national peak. Strong Q4 / Q7 input."
+    },
+    {
+      "category": "competitive_landscape",
+      "claim": "UK BMS market is dominated by incumbent global players: Honeywell, Johnson Controls, Schneider Electric, Siemens Building Technologies, Trend, Priva, ABB, Eaton, Tridium, alongside UK specialists (E.ON Control Solutions, Crown House Technologies, Beckhoff, Controlco).",
+      "source_name": "Carbon Trust — DTEM Buyer's Guide; UK BMS service framework tenders",
+      "source_url": "https://www.carbontrust.com/resources/digital-technologies-for-energy-management-a-buyers-guide/dtem-selecting-the-right-system",
+      "source_date": "2024",
+      "source_tier": 2,
+      "cross_referenced": true,
+      "second_source_url": "https://etl.energysecurity.gov.uk/products/energy-monitoring/building-energy-management-systems",
+      "uk_specific": true,
+      "notes": "Incumbents focus on building-level optimisation; ThermaSync's network-level coordination is genuinely differentiated. Useful Q4 / Q6 evidence."
+    },
+    {
+      "category": "competitive_landscape",
+      "claim": "Global smart building market projected to grow from ~$80.6 billion to $328.6 billion by 2029.",
+      "source_name": "Smart building market projections (via UK BMS WebSearch result)",
+      "source_url": "https://etl.energysecurity.gov.uk/news-events/news/smart-building-controls-energy-savings-and-cost-reduction-how-etl-listed-products-can-help-your-business",
+      "source_date": "2024",
+      "source_tier": 2,
+      "cross_referenced": false,
+      "second_source_url": null,
+      "uk_specific": false,
+      "notes": "GLOBAL figure not UK. Use only as broader market-context framing, never as UK TAM."
+    },
+    {
+      "category": "economic_impact",
+      "claim": "Government heat-network grant pipeline includes HNIP (£320m), GHNF (£268m + £485m additional announced Dec 2023 = £753m), HNES (£77m), HNDU (£37m) — over £1bn in deployed/committed public capex support.",
+      "source_name": "DESNZ — UK heat networks: market overview (gov.uk)",
+      "source_url": "https://www.gov.uk/government/publications/uk-heat-networks-market-overview/uk-heat-networks-market-overview-accessible-webpage",
+      "source_date": "2024",
+      "source_tier": 1,
+      "cross_referenced": false,
+      "second_source_url": null,
+      "uk_specific": true,
+      "notes": "Useful Q7 'wider economic benefit' context — public investment is creating demand pull for ThermaSync's controllers across the GHNF/HNIP-funded networks."
+    },
+    {
+      "category": "funder_intelligence",
+      "claim": "Innovate UK Smart Grants November 2024 competition is open; lead or collaborating SME required; standard Smart Grant rules apply.",
+      "source_name": "Innovation Funding Service — Smart Grants November 2024 competition page",
+      "source_url": "https://apply-for-innovation-funding.service.gov.uk/competition/2057/overview/94b01162-f7ac-45b1-aede-ce7663a3be3a",
+      "source_date": "2024-11",
+      "source_tier": 1,
+      "cross_referenced": false,
+      "second_source_url": null,
+      "uk_specific": true,
+      "notes": "Confirms the competition the brief refers to."
+    },
+    {
+      "category": "funder_intelligence",
+      "claim": "Innovate UK's Net Zero Heat programme awarded £7.6m to three projects in 2024–25 — including Elemental Power (£1.9m) for digital-twin-driven non-domestic retrofits using local renewables.",
+      "source_name": "UKRI — Net zero projects secure £7.6 million to cut heating emissions",
+      "source_url": "https://www.ukri.org/news/net-zero-projects-secure-7-6-million-to-cut-heating-emissions/",
+      "source_date": "2024",
+      "source_tier": 1,
+      "cross_referenced": false,
+      "second_source_url": null,
+      "uk_specific": true,
+      "notes": "Tells us Innovate UK is actively funding non-domestic heat decarbonisation control software — strong signal that ThermaSync's premise aligns with current funder priorities."
+    }
+  ],
+  "funder_intelligence": {
+    "recent_funded_projects": [
+      "Elemental Power — £1.9m (Net Zero Heat) — immersive digital twins for non-domestic building retrofits, local renewables integration",
+      "Two other Net Zero Heat projects (£5.7m combined) — programme detail in UKRI press release"
+    ],
+    "stated_priorities": [
+      "Game-changing, market-leading R&D (Smart Grants core criterion)",
+      "Heat decarbonisation across non-domestic buildings (Net Zero Heat programme)",
+      "Demand-side flexibility and clean power 2030 (Clean Flexibility Roadmap, jointly with DESNZ and Ofgem)",
+      "Heat network deployment ahead of statutory Heat Network Zoning"
+    ],
+    "notes": "Smart Grants is sector-agnostic but ThermaSync sits squarely in the heat decarbonisation + demand flexibility intersection that DESNZ/NESO/Ofgem and Innovate UK have all named as 2025–2030 priorities. Frame the application against the Clean Flexibility Roadmap and the Heat Network (Market Framework) Regulations 2025."
+  },
+  "gaps": [
+    "Could not independently cross-reference the £340m UK addressable-market figure cited in ThermaSync's internal company profile (attributed to Frontier Economics, Heat Network Market Report 2023). Reachable market data in this research is broader (whole UK district heating, ~£1.2bn). For drafting: cite ThermaSync's segment figure as their own analysis, OR use the broader £1.2bn DH market and define their addressable wedge transparently.",
+    "No UK-specific jobs/productivity figures for the heat-network controls subsector specifically — only general decarbonisation/economy figures. Q7 wider-economy claims will need to use broader heat-decarbonisation employment context plus ThermaSync's own forecasts.",
+    "Clean Flexibility Roadmap PDF could not be text-extracted (binary parse failed) — used WebSearch summary and NESO landing page instead. Specific roadmap milestones beyond the December 2025 / April 2026 ones noted may exist but are not in this pack.",
+    "Full list of recent Innovate UK Smart Grant winners in this niche not retrieved — only Net Zero Heat programme awards. Funder-intelligence on Smart Grants specifically is therefore generic, not award-list-driven."
+  ],
+  "conflicts": [
+    "Market size scope: $1.54bn (UK pure district heating, Mordor / Research and Markets) vs $4.3bn (UK district heating AND cooling, Verified Market Reports). Use the pure-heating figure unless cooling is in scope; do not conflate."
+  ],
+  "low_confidence_items": [
+    "The 'global smart building market $80.6bn → $328.6bn by 2029' figure is global, not UK, and sourced via a secondary synthesis. Use only as broad framing, never as UK TAM."
+  ]
+}

@@ -1,0 +1,256 @@
+{
+  "section": "Q8 — Delivering your project",
+  "draft_file": "q8-delivery-draft.md",
+  "verified_at": "2026-06-04T16:58:00+01:00",
+  "overall_status": "needs_revision",
+  "claim_results": [
+    {
+      "id": "C1",
+      "claim": "Dr Priya Nair (CEO) — PhD Control Systems Engineering, University of Sheffield (2018); MEng Imperial College London (2013); 5 years at Siemens Smart Infrastructure delivering HVAC optimisation across 12 UK commercial sites; co-investigator on the £280,000 Innovate UK 'Smart Grid Integration for Commercial Buildings' project (2019–2021); 3 peer-reviewed publications",
+      "status": "verified",
+      "source": "company-profile.md chunk 5",
+      "vault_text": "Dr Priya Nair — CEO. PhD in Control Systems Engineering, University of Sheffield (2018). MEng Mechanical Engineering, Imperial College London (2013). 5 years at Siemens Smart Infrastructure as a building automation systems engineer, delivering HVAC optimisation projects across 12 major commercial sites in the UK. Co-investigator on Innovate UK-funded project 'Smart Grid Integration for Commercial Buildings' (2019–2021, £280,000). 3 peer-reviewed publications in building energy systems.",
+      "issue": "Draft drops 'Mechanical Engineering' from Imperial MEng description. Minor abbreviation — fact is verified, but for honesty/completeness consider restoring the discipline.",
+      "fix_required": false
+    },
+    {
+      "id": "C2",
+      "claim": "James Okafor (CTO) — MEng Software Engineering, University of Manchester (2015); 7 years at PassivSystems (acquired by Centrica), led the algorithm team that reduced peak demand for 18,000 domestic customers by 19% in a National Grid ESO trial; named inventor on 2 granted UK/EU patents in demand-response algorithms",
+      "status": "verified",
+      "source": "company-profile.md chunk 5",
+      "vault_text": "James Okafor — CTO. MEng Software Engineering, University of Manchester (2015). 7 years at PassivSystems (acquired by Centrica) developing demand response algorithms for domestic heat pumps. Led the algorithm team that reduced peak demand for 18,000 domestic customers by 19% in a National Grid ESO trial. Named inventor on 2 patents in demand-side response algorithms (granted, UK and EU).",
+      "issue": null,
+      "fix_required": false
+    },
+    {
+      "id": "C3",
+      "claim": "Sarah Chen (Head of Commercial) — MBA Warwick (2017); BEng Cardiff (2012); 8 years at Atkins and WSP delivering feasibility studies on 14 UK district heating projects; contributing author, CIBSE Heat Networks Code of Practice (2021)",
+      "status": "verified",
+      "source": "company-profile.md chunks 5–6",
+      "vault_text": "Sarah Chen — Head of Commercial. MBA, Warwick Business School (2017). BEng Building Services Engineering, Cardiff University (2012). 8 years in energy consultancy at Atkins and WSP, specialising in heat network feasibility and commercial structuring. Delivered feasibility studies for 14 district heating projects across the UK. Contributing author, CIBSE Heat Networks Code of Practice (2021).",
+      "issue": "Draft drops 'Building Services Engineering' from Cardiff BEng. Minor abbreviation — fact is verified.",
+      "fix_required": false
+    },
+    {
+      "id": "C4",
+      "claim": "Operations Manager and Marcus Webb (part-time, formerly Heat Network Delivery Unit at DLUHC) as regulatory advisor from Q2 2024",
+      "status": "verified",
+      "source": "company-profile.md chunk 6",
+      "vault_text": "Marcus Webb (formerly Heat Network Delivery Unit, DLUHC), engaged from Q2 2024. Team size: 6 total (3 technical, 1 commercial, 1 operations, 1 part-time regulatory advisor).",
+      "issue": "Operations Manager is implied by the '1 operations' team-size breakdown in vault; not named in draft, which is honest given vault gives no name. Team-of-6 composition consistent.",
+      "fix_required": false
+    },
+    {
+      "id": "C5",
+      "claim": "Project hires: Senior Engineer (M1, algorithm productionisation); Commercial Deployment Lead (M9, supporting Brindleyplace + Phase 2 ramp)",
+      "status": "analytical_inference_flagged",
+      "source": "Forge resource plan inference reconciling Q7 jobs estimate (2 direct project hires) with WP timing",
+      "vault_text": "Not in vault",
+      "issue": "Forward-looking project hires. Roles, titles, and timing (M1, M9) are Forge construction designed to reconcile with Q7's '2 direct project hires — senior engineer (Q1) and commercial deployment lead (Q3)' claim. Logically consistent: M1≈Q1, M9≈Q3 in the 6–18 month single-applicant frame. Flag for team confirmation before submission.",
+      "fix_required": false
+    },
+    {
+      "id": "C6",
+      "claim": "Subcontractor: Applied Electronics Ltd (Leeds), BMS-retrofit hardware specialist under signed development agreement",
+      "status": "verified",
+      "source": "company-profile.md chunk 6",
+      "vault_text": "Manufacturing and hardware scale-up expertise will be provided by subcontractor: Applied Electronics Ltd (Leeds), specialist in BMS retrofit hardware, with whom ThermaSync has a development agreement.",
+      "issue": null,
+      "fix_required": false
+    },
+    {
+      "id": "C7",
+      "claim": "Advisory board: Prof. David Fisk CBE (former Chief Scientific Adviser, DECC); Dr Kat Kramer (climate policy, formerly Carbon Brief)",
+      "status": "verified",
+      "source": "company-profile.md chunk 6",
+      "vault_text": "Advisory board: Prof. David Fisk CBE — former Chief Scientific Adviser, DECC — energy systems. Dr Kat Kramer — climate policy, formerly Carbon Brief — policy context.",
+      "issue": null,
+      "fix_required": false
+    },
+    {
+      "id": "C8",
+      "claim": "Work-package structure WP1–WP6 with leads, months, and binary milestones",
+      "status": "analytical_inference_flagged",
+      "source": "Forge project-plan construction from TRL 4 → TRL 7 transition + Sheffield/Brindleyplace anchor sites",
+      "vault_text": "Not in vault. Binary-milestone framing follows IUK guidance verbatim.",
+      "issue": "Entire WP structure (WP1–WP6, leads, M-month allocations) is Forge construction. Defensible as a coherent plan and clearly flagged in draft source map. Format follows IUK guidance and GreenFlux style precedent (Section 6 style example). Flag for team confirmation against actual delivery plan before submission.",
+      "fix_required": false
+    },
+    {
+      "id": "C9",
+      "claim": "Binary-milestone framing follows Innovate UK assessor guidance: 'Milestones that are binary (achieved/not achieved)'",
+      "status": "verified",
+      "source": "innovate-uk-smart-grant-guidance-example.md chunk 2",
+      "vault_text": "Milestones that are binary (achieved/not achieved) rather than vague progress measures.",
+      "issue": null,
+      "fix_required": false
+    },
+    {
+      "id": "C10",
+      "claim": "WP2 M6: 23% peak target on 14-node simulation",
+      "status": "verified_with_terminology_drift",
+      "source": "company-profile.md chunks 1, 7; Q4 verification for 23%",
+      "vault_text": "Laboratory validation of the predictive algorithm on simulated network data covering 14 building archetypes ... Predictive demand-shifting algorithm validated on simulated 14-node network. Peak demand reduction of 23% demonstrated in simulation.",
+      "issue": "Vault uses both '14 building archetypes' (chunk 1) and '14-node network' (chunk 7) — terms are used somewhat interchangeably in vault. Draft's '14-node simulation' is faithful to chunk 7. Acceptable.",
+      "fix_required": false
+    },
+    {
+      "id": "C11",
+      "claim": "WP3 M8: 50 production-grade controllers delivered",
+      "status": "derived_estimate",
+      "source": "Forge hardware-build estimate",
+      "vault_text": "Not in vault",
+      "issue": "Forge sizing: 240 dwellings ÷ ~10 dwellings/controller ≈ 24 controllers + spares + Brindleyplace 6-building portfolio ≈ 50 units. Methodology stated in draft source map. Plausible but flag for Applied Electronics scope-of-work confirmation. If actual ratio differs the WP3 milestone number may need adjusting.",
+      "fix_required": false
+    },
+    {
+      "id": "C12",
+      "claim": "WP4: Sheffield 240-dwelling deployment, M6–M15; M15 binary milestone: ≥18% peak reduction over 3 months live operation",
+      "status": "partially_verified_with_inference",
+      "source": "company-profile.md chunk 2 (Sheffield pilot); Forge for ≥18% acceptance threshold and timeline",
+      "vault_text": "Sheffield City Council: paid pilot agreement signed, covering a 240-dwelling district heating network in S2 postcode.",
+      "issue": "Sheffield pilot agreement and 240-dwelling scale are verified. WP timing (M6–M15) is Forge plan. The ≥18% acceptance threshold against the 23% simulation target is Forge construction designed as an honest fallback — industry-standard 'target with explicit fallback' approach. Flag for team confirmation that 18% is the right floor; risk register relies on it.",
+      "fix_required": false
+    },
+    {
+      "id": "C13",
+      "claim": "WP5: Brindleyplace commercial pilot, M9–M18; M18: TRL 7 sign-off; Brindleyplace LOI converted",
+      "status": "partially_verified_with_inference",
+      "source": "company-profile.md chunk 3 (Brindleyplace LOI); Q4 verification (TRL 7); Forge for WP timing and LOI conversion",
+      "vault_text": "Brindleyplace Estate (Birmingham): letter of intent signed for 6-building commercial portfolio pilot, subject to TRL 7 validation.",
+      "issue": "Brindleyplace LOI and TRL 7 trigger are verified. WP timing and 'LOI converted' commercial milestone are Forge construction. Defensible but flag for Sarah Chen to confirm achievability.",
+      "fix_required": false
+    },
+    {
+      "id": "C14",
+      "claim": "WP6: M18 binary milestone: ≥5 named Phase 2 operators in pipeline",
+      "status": "analytical_inference_flagged",
+      "source": "Forge commercial-readiness target",
+      "vault_text": "Not in vault",
+      "issue": "Forge target for commercial readiness. No basis in vault or research pack. Number (5) is plausible for a Phase 2 ramp but flag for Sarah Chen to confirm against actual pipeline visibility.",
+      "fix_required": false
+    },
+    {
+      "id": "C15",
+      "claim": "Risk 1: Network-scale algorithm underperforms simulation (Medium) — 6-week WP2 contingency; ≥18% acceptance threshold; Okafor's PassivSystems / ESO-trial track record demonstrates capability",
+      "status": "verified_with_inference",
+      "source": "Forge mitigation design; Okafor track record verified per C2",
+      "vault_text": "Style precedent: GreenFlux Section 6 'Risk: Membrane scale-up fails to meet conductivity targets. Probability: Medium. Mitigation: ... WP1 has a 6-week contingency to evaluate alternative B.'",
+      "issue": "Risk framing (Probability + Mitigation) follows style-example precedent exactly. The 6-week contingency duration mirrors GreenFlux precedent — defensible but is Forge construction, not from vault. Team-capability fallback (Okafor's track record) is honest and uses verified credentials.",
+      "fix_required": false
+    },
+    {
+      "id": "C16",
+      "claim": "Risk 2: BMS integration delays at Sheffield (Medium) — Three BMS vendors bench-validated pre-project; M6 binary gate prevents WP4 entry without confirmed integration",
+      "status": "verified_with_inference",
+      "source": "company-profile.md chunk 1 (three BMS bench testing); Forge for M6 gate design",
+      "vault_text": "Bench testing of the controller hardware with three BMS manufacturers confirmed.",
+      "issue": "'Three BMS manufacturers bench-validated' is verified. The M6 gating mechanism is Forge mitigation design. Acceptable as project-plan logic.",
+      "fix_required": false
+    },
+    {
+      "id": "C17",
+      "claim": "Risk 3: Brindleyplace LOI lapses before TRL 7 (Low–Medium) — Sarah Chen's pipeline holds two alternative commercial portfolio sites; M15 TRL validation includes a 3-month buffer to M18",
+      "status": "overstated",
+      "source": "Forge inference",
+      "vault_text": "Not in vault. Vault names only Sheffield (paid pilot) and Brindleyplace (LOI) as current customers/pilots.",
+      "issue": "The claim that 'Sarah Chen's pipeline holds two alternative commercial portfolio sites' is Forge invention — there is no evidence in the vault that two alternative commercial portfolio sites exist as named pipeline opportunities. This is the kind of unsupported specific number that assessors penalise (per IUK guidance chunk 4: 'Market size not credible' / 'Risks not identified'). RECOMMENDED FIX: replace with verifiable framing such as 'Sarah Chen leads an ongoing commercial pipeline development workstream, with WP6 explicitly tasked with building a Phase 2 operator pipeline as a project deliverable'. The 3-month M15→M18 buffer is fine as project-plan logic.",
+      "fix_required": true
+    },
+    {
+      "id": "C18",
+      "claim": "Risk 4: Heat Network Zoning licensing changes mid-project (Medium) — Marcus Webb (ex-HNDU) retained from Q2 2024; advisory engagement with Prof. Fisk for energy-systems oversight",
+      "status": "verified",
+      "source": "company-profile.md chunk 6",
+      "vault_text": "Marcus Webb (formerly Heat Network Delivery Unit, DLUHC), engaged from Q2 2024 ... Prof. David Fisk CBE — former Chief Scientific Adviser, DECC — energy systems.",
+      "issue": null,
+      "fix_required": false
+    }
+  ],
+  "requirements_coverage": [
+    {
+      "requirement": "Realistic project timeline with clear work packages and milestones",
+      "status": "addressed",
+      "notes": "WP1–WP6 with months, leads, and binary milestones in standard IUK format. 18-month duration matches brief constraints (6–18m single applicant)."
+    },
+    {
+      "requirement": "Milestones that are binary (achieved/not achieved)",
+      "status": "addressed",
+      "notes": "Every WP milestone framed as a binary deliverable (e.g. 'M6: 23% peak target on 14-node simulation', 'M8: 50 production-grade controllers delivered', 'M18: TRL 7 sign-off'). Matches guidance verbatim per C9."
+    },
+    {
+      "requirement": "Team with directly relevant expertise — named members with specific roles and credentials",
+      "status": "addressed",
+      "notes": "Three core members named with verified credentials directly relevant to the project: control-systems PhD (Nair), demand-response algorithm track record (Okafor, with ESO-trial precedent on 18k customers at 19% peak reduction), heat-network commercial expertise (Chen, CIBSE Code of Practice author)."
+    },
+    {
+      "requirement": "Honest assessment of skills gaps with a credible plan to fill them",
+      "status": "addressed",
+      "notes": "Regulatory gap → Marcus Webb. Manufacturing gap → Applied Electronics Ltd. Both verified in vault. Project hires (Senior Engineer M1, Commercial Deployment Lead M9) named with timing."
+    },
+    {
+      "requirement": "Risk register identifying technical, commercial, and management risks with specific mitigations",
+      "status": "addressed",
+      "notes": "Four risks covering technical (algorithm), integration (BMS), commercial (LOI), and regulatory (Zoning) — matches IUK guidance dimensions. Risk 3 mitigation overstated per C17."
+    }
+  ],
+  "red_flags_found": [
+    {
+      "red_flag": "Specific unsupported claim about pipeline opportunities",
+      "where": "Risk 3 mitigation: 'Sarah Chen's pipeline holds two alternative commercial portfolio sites'",
+      "severity": "medium",
+      "notes": "Per IUK guidance, assessors penalise specific numbers that cannot be traced to evidence. This phrasing invents a specific number (two sites) that is not in the vault. Recommended fix in C17."
+    }
+  ],
+  "red_flag_checks": [
+    {
+      "red_flag": "Generic risks ('project might take longer than expected') rather than project-specific risks",
+      "triggered": false,
+      "notes": "All four risks are specific to ThermaSync's project: algorithm scale-up, BMS integration, commercial-pilot LOI, Heat Network Zoning. Each has a project-specific mitigation referencing named team members or contingency mechanics."
+    },
+    {
+      "red_flag": "Overloaded timelines where the same person leads multiple parallel work packages beyond capacity",
+      "triggered": false,
+      "notes": "Okafor leads WP2 (M1–M6) and co-leads WP4 (M6–M15) and WP5 (M9–M18). WP2 completes before WP4 ramps; WP4 and WP5 overlap M9–M15, but James co-leads with Webb (WP4) and Chen (WP5). Plausible. Nair carries WP1 across the whole project, which is standard for a project director role. No obvious >100% allocation in the named-leads view, but the team should run a person-month calculation against actual time allocation before submission — assessors do this."
+    },
+    {
+      "red_flag": "Milestone descriptions that cannot be objectively assessed",
+      "triggered": false,
+      "notes": "All milestones are quantified or binary: '23% peak target on 14-node simulation', '50 production-grade controllers delivered', '≥18% peak reduction over 3 months live operation', 'TRL 7 sign-off', '≥5 named Phase 2 operators'. All objectively assessable."
+    },
+    {
+      "red_flag": "Team lacks directly relevant technical expertise",
+      "triggered": false,
+      "notes": "Okafor's ESO-trial track record (19% peak reduction on 18k customers) is directly analogous to the project's core technical challenge. Nair's Siemens BMS / £280k IUK co-I experience covers the building-automation domain. Strong fit."
+    },
+    {
+      "red_flag": "Unverified or invented team credentials",
+      "triggered": false,
+      "notes": "All three core team members' credentials verified verbatim against company-profile.md. Advisory board verified. Subcontractor verified. Marcus Webb verified."
+    }
+  ],
+  "cross_section_conflicts": [],
+  "cross_section_notes": "Consistent with Q4 (TRL 4 → TRL 7, 23% peak reduction, 14-node simulation), Q5 (6-person team, Sheffield + Brindleyplace anchor sites, regulatory window via Marcus Webb), Q6 (Brindleyplace 6-building portfolio, Phase 1/2/3 plan, three customer segments), Q7 (2 direct hires + 8–10 ramp). Q8 introduces specific WP structure and milestone numbers (50 controllers, ≥18%, ≥5 operators) — these are Forge construction and must be reconciled with Q9 cost breakdown when drafted. Important Q9 link: Q5 declared £400–500k project cost; Q8 WP plan must sum to this in Q9. Also flag for Q9: subcontractor cost line for Applied Electronics; staff cost line for Senior Engineer (M1–M18 = 18 months) and Commercial Deployment Lead (M9–M18 = 10 months).",
+  "summary": {
+    "total_claims": 18,
+    "verified": 8,
+    "verified_with_inference_or_estimate": 4,
+    "partially_verified_with_inference": 2,
+    "derived_estimates": 1,
+    "analytical_inferences_flagged": 2,
+    "overstated": 1,
+    "number_mismatch": 0,
+    "hallucinations": 0,
+    "requirements_missing": 0,
+    "red_flags_triggered": 1
+  },
+  "fix_summary": [
+    "C17 (REQUIRED): Replace 'Sarah Chen's pipeline holds two alternative commercial portfolio sites' with a verifiable mitigation framing such as 'Sarah Chen leads ongoing Phase 2 pipeline development; WP6 is explicitly tasked with building a Phase 2 operator pipeline as a project deliverable, providing commercial redundancy if Brindleyplace lapses'.",
+    "Pre-submission TODOs (not fix-required for verification stage, but flag in team review):",
+    "- Confirm WP timing and lead allocations against the team's actual delivery plan (C8).",
+    "- Confirm 50-controller hardware sizing with Applied Electronics scope of work (C11).",
+    "- Confirm ≥18% live acceptance threshold is the right floor against the 23% simulation target (C12).",
+    "- Reconcile WP cost summation with Q5's £400–500k declared envelope when drafting Q9.",
+    "- Run a person-month calculation per named lead against allocation; assessors check this."
+  ]
+}

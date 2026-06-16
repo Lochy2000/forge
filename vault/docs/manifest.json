@@ -100,5 +100,11 @@
     "quality_signal": "unknown",
     "source_type": "internal",
     "sensitivity": "internal"
+  },
+  "uploads/research-notes-innovate_uk-thermasync.md": {
+    "grant_scheme": "innovate_uk",
+    "quality_signal": "unknown",
+    "source_type": "internal",
+    "sensitivity": "internal"
   }
 }

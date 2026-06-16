@@ -1,0 +1,256 @@
+{
+  "section": "Q4 — Your idea and innovation",
+  "draft_file": "q4-innovation-draft.md",
+  "verified_at": "2026-06-04T12:35:00+01:00",
+  "overall_status": "needs_revision",
+  "claim_results": [
+    {
+      "id": "C1",
+      "claim": "TLSC ... synchronises thermal loads across distributed heating and cooling networks in real time",
+      "status": "verified",
+      "source": "company-profile.md, chunk 0",
+      "vault_text": "TLSC ... is a software-hardware system that sits at each node in a distributed heat network — district heating, commercial HVAC, industrial process cooling — and coordinates thermal loads across the network in real time.",
+      "issue": null,
+      "fix_required": false
+    },
+    {
+      "id": "C2",
+      "claim": "targeting up to a 23% reduction in network peak thermal demand without replacement of existing plant or building infrastructure",
+      "status": "verified",
+      "source": "company-profile.md, chunks 0 and 7",
+      "vault_text": "reduce peak energy demand by up to 23% without capital investment in new infrastructure ... Peak demand reduction of 23% demonstrated in simulation.",
+      "issue": "23% is internally-simulated and the draft frames it as such later in the text — consistent.",
+      "fix_required": false
+    },
+    {
+      "id": "C3",
+      "claim": "This 18-month, single-applicant Smart Grant project advances TLSC from TRL 5 ... to TRL 7",
+      "status": "number_mismatch",
+      "source": "company-profile.md, chunk 1",
+      "vault_text": "**Current TRL:** 4. **Evidence for current TRL:** Laboratory validation of the predictive algorithm on simulated network data covering 14 building archetypes. Bench testing of the controller hardware with three BMS manufacturers confirmed. No live network deployment yet.",
+      "issue": "Source explicitly states Current TRL is 4, not 5. The draft used the TRL 4 evidence (bench testing + no live network) and relabelled it as TRL 5. This was pre-flagged in the source map as 'inferred — confirm with team', but the source is unambiguous. Two options: (a) correct to TRL 4 → TRL 7 (a bigger jump, may affect plausibility of an 18-month plan) or (b) team confirms a real TRL 5 milestone has been hit since the company-profile was written and the profile is out of date.",
+      "fix_required": true
+    },
+    {
+      "id": "C4",
+      "claim": "bench testing of the controller hardware with three BMS manufacturers confirmed",
+      "status": "verified",
+      "source": "company-profile.md, chunk 1",
+      "vault_text": "Bench testing of the controller hardware with three BMS manufacturers confirmed.",
+      "issue": null,
+      "fix_required": false
+    },
+    {
+      "id": "C5",
+      "claim": "a paid pilot agreement signed with Sheffield City Council for a 240-dwelling district heating network",
+      "status": "verified",
+      "source": "company-profile.md, chunks 2-3",
+      "vault_text": "Sheffield City Council: paid pilot agreement signed, covering a 240-dwelling district heating network in S2 postcode.",
+      "issue": null,
+      "fix_required": false
+    },
+    {
+      "id": "C6",
+      "claim": "a prototype demonstrated in that operational network and a second commercial portfolio site",
+      "status": "overstated",
+      "source": "company-profile.md, chunk 3",
+      "vault_text": "Brindleyplace Estate (Birmingham): letter of intent signed for 6-building commercial portfolio pilot, subject to TRL 7 validation.",
+      "issue": "Source describes the second site (Brindleyplace) as a letter of intent only, contingent on TRL 7 validation. The draft presents demonstration at the second site as a project deliverable. Soften to '...and, contingent on TRL 7 validation, a second commercial portfolio site at Brindleyplace, Birmingham, where a letter of intent is in place'.",
+      "fix_required": true
+    },
+    {
+      "id": "C7",
+      "claim": "Network-level coordination. One optimiser running across every node ... exploiting demand diversity between buildings",
+      "status": "verified",
+      "source": "company-profile.md, chunks 2-4",
+      "vault_text": "Network-level optimisation: coordinates across all nodes simultaneously rather than optimising each building independently, capturing demand diversity benefits.",
+      "issue": null,
+      "fix_required": false
+    },
+    {
+      "id": "C8",
+      "claim": "Predictive load-shifting 2–6 hours ahead of peak. Driven by weather forecasts, building-thermal-mass models, and grid price signals.",
+      "status": "verified_with_minor_addition",
+      "source": "company-profile.md, chunks 0 and 2",
+      "vault_text": "shifts loads 2–6 hours ahead of demand peaks using weather and grid price forecasting ... uses a predictive algorithm trained on historical demand patterns, weather forecasts, and grid pricing signals to pre-cool or pre-heat buildings.",
+      "issue": "'building-thermal-mass models' is not explicitly named in the source — but 'pre-cool or pre-heat buildings before peak periods' implies thermal-mass exploitation. Defensible but slightly extends the source language. Minor.",
+      "fix_required": false
+    },
+    {
+      "id": "C9",
+      "claim": "UK patent application GB2024/TH0012, filed March 2024",
+      "status": "verified",
+      "source": "company-profile.md, chunks 2-4",
+      "vault_text": "GB2024/TH0012 — filed March 2024, covers the network-level load coordination algorithm.",
+      "issue": null,
+      "fix_required": false
+    },
+    {
+      "id": "C10",
+      "claim": "Retrofit-first deployment via BACnet and Modbus into existing building management systems (BMS) — no smart meters, heat pumps, or BMS replacement required",
+      "status": "verified",
+      "source": "company-profile.md, chunks 0 and 2",
+      "vault_text": "retrofit controller unit that connects to existing building management systems (BMS) via BACnet and Modbus protocols. No replacement of existing equipment is required ... Retrofit-first: works with existing infrastructure, no capital replacement needed — unlike competitors requiring new smart meters or new heat pumps.",
+      "issue": null,
+      "fix_required": false
+    },
+    {
+      "id": "C11",
+      "claim": "Heat in buildings accounts for 37% of total UK emissions (DESNZ, UK heat networks: market overview, 2024)",
+      "status": "verified",
+      "source": "grant-research.json finding #5 (DESNZ 2024)",
+      "vault_text": "Heat in buildings is 37% of total UK emissions (468 MtCO2e total): space heating 17%, industrial heat 14%, hot water 4%, cooking 2%.",
+      "issue": "Sub-figures (17% space heating, 14% industrial heat, 4% hot water, 2% cooking) sum to 37%. Note: the 14% 'industrial heat' is included in the 37% — defensible as we are using the source's own wording.",
+      "fix_required": false
+    },
+    {
+      "id": "C12",
+      "claim": "heat networks deliver less than 3% of UK heat against a Climate Change Committee Net Zero target of approximately 20% by 2050",
+      "status": "overstated",
+      "source": "grant-research.json finding #3 (DESNZ 2024)",
+      "vault_text": "Heat networks supply less than 3% of UK heat in 2022/2024; the Climate Change Committee Net Zero scenario targets ~20% market share by 2050.",
+      "issue": "Source says 'Net Zero scenario' — the CCC publishes scenario pathways, not binding targets. Change 'target' → 'scenario' to match the source language precisely: '...against a Climate Change Committee Net Zero scenario of approximately 20% by 2050'.",
+      "fix_required": true
+    },
+    {
+      "id": "C13",
+      "claim": "Heat Networks (Market Framework) (GB) Regulations 2025 bring district networks under Ofgem regulation for the first time and impose minimum technical standards",
+      "status": "overstated",
+      "source": "grant-research.json finding #6",
+      "vault_text": "establish Ofgem, Citizens Advice, Consumer Scotland and the Energy Ombudsman in the heat network market, regulating district and communal heat networks as a utility for the first time.",
+      "issue": "First half ('Ofgem regulation for the first time') is verified. Second half ('impose minimum technical standards') is NOT supported by the research finding. The finding describes regulating heat networks as a utility but does not specifically state 'minimum technical standards' are imposed. Either remove this phrase, or source it separately from the regulation text before keeping it.",
+      "fix_required": true
+    },
+    {
+      "id": "C14",
+      "claim": "Heat Network Zoning under the Energy Act 2023 will designate zones where connection becomes mandatory",
+      "status": "overstated",
+      "source": "grant-research.json finding #7",
+      "vault_text": "Heat Network Zoning, introduced under the Energy Act 2023 and launched in 2025, designates zones where heat networks are the lowest-cost low-carbon heat option, empowering local authorities to mandate connections.",
+      "issue": "Source says 'empowering local authorities to mandate connections' — the draft elides this to 'connection becomes mandatory', which overstates. Local authority discretion is part of the framework. Soften to: '...will designate zones where local authorities can mandate connection'.",
+      "fix_required": true
+    },
+    {
+      "id": "C15",
+      "claim": "UK building-control incumbents — Honeywell, Johnson Controls, Schneider Electric, Siemens Building Technologies, Trend, Priva, ABB, and Tridium — dominate the BMS market (Carbon Trust DTEM Buyer's Guide, 2024)",
+      "status": "verified",
+      "source": "grant-research.json finding #12",
+      "vault_text": "UK BMS market is dominated by incumbent global players: Honeywell, Johnson Controls, Schneider Electric, Siemens Building Technologies, Trend, Priva, ABB, Eaton, Tridium, alongside UK specialists (E.ON Control Solutions, Crown House Technologies, Beckhoff, Controlco). Source: Carbon Trust — DTEM Buyer's Guide.",
+      "issue": "Draft drops Eaton and the UK specialists. That is selection, not invention. Verified.",
+      "fix_required": false
+    },
+    {
+      "id": "C16",
+      "claim": "Cross-network coordination of thermal load is not part of their standard offering",
+      "status": "verified",
+      "source": "grant-research.json finding #12 notes",
+      "vault_text": "Incumbents focus on building-level optimisation; ThermaSync's network-level coordination is genuinely differentiated.",
+      "issue": null,
+      "fix_required": false
+    },
+    {
+      "id": "C17",
+      "claim": "ScienceDirect paper (Assessing the ability of electrified domestic heating in the UK to provide responsive demand, 2021) finds thermal load-shifting from electrified heating could remove up to 7 GW (≈5%) of GB peak electricity demand",
+      "status": "verified_with_simplification",
+      "source": "grant-research.json finding #11",
+      "vault_text": "Title: 'Assessing the ability of electrified domestic heating in the UK to provide unplanned, short-term responsive demand'. Claim: 'Shifting hot-water heat-pump generation using heat storage could cut peak GB electricity demand by 7 GW (5%); adding 20% space-heating shifting brings a further 10% peak reduction.'",
+      "issue": "(a) Paper title shortened — drops 'unplanned, short-term'. Recommend restoring the full title to avoid an apparent misquote. (b) The 7 GW figure is specifically for hot-water heat-pump shifting using heat storage — the draft generalises to 'thermal load-shifting from electrified heating'. The simplification is directionally true but a tighter wording would be: 'shifting electrified hot-water heat-pump load could remove up to 7 GW (≈5%) of GB peak electricity demand, with further savings from space-heating shifting'.",
+      "fix_required": true
+    },
+    {
+      "id": "C18",
+      "claim": "2019 ResearchGate study (Demand side management in district heating systems by innovative control) reports that 2–3 hour ahead thermal demand forecasting delivers an average 25% reduction in individual-building thermal load",
+      "status": "verified",
+      "source": "grant-research.json finding #10",
+      "vault_text": "Advanced demand management with 2–3 hour ahead thermal demand forecasting can deliver an average 25% reduction in the thermal load of individual buildings. — Demand side management in district heating systems by innovative control, ResearchGate, 2019.",
+      "issue": null,
+      "fix_required": false
+    },
+    {
+      "id": "C19",
+      "claim": "directly comparable in magnitude to ThermaSync's internally-simulated 23% network-level peak reduction",
+      "status": "verified",
+      "source": "company-profile.md, chunk 7",
+      "vault_text": "Peak demand reduction of 23% demonstrated in simulation. Algorithm performance validated across Sheffield, London, and Glasgow climate profiles.",
+      "issue": "Framing as 'internally-simulated' is correct per the source. Good honest framing.",
+      "fix_required": false
+    },
+    {
+      "id": "C20",
+      "claim": "A freedom-to-operate search completed January 2024 identified no blocking patents on the network-level coordination approach",
+      "status": "verified",
+      "source": "company-profile.md, chunks 2-4",
+      "vault_text": "Freedom to operate: FTO search completed January 2024, no blocking patents identified for the specific network coordination approach.",
+      "issue": null,
+      "fix_required": false
+    },
+    {
+      "id": "C21",
+      "claim": "ThermaSync's 847,000-hour training dataset of thermal demand profiles across 23 UK building types",
+      "status": "overstated",
+      "source": "company-profile.md, chunks 2-4",
+      "vault_text": "Know-how: Training dataset of 847,000 hours of thermal demand profiles across 23 building types — not publicly available.",
+      "issue": "Source says '23 building types'. Draft adds 'UK' qualifier. Likely true given ThermaSync's UK focus, but it is an addition beyond what the source states. Either remove 'UK' or, if the team confirms the dataset is UK-only, the source document itself should be updated to say so.",
+      "fix_required": true
+    },
+    {
+      "id": "C22",
+      "claim": "Project IP outputs follow the same strategy: algorithm enhancements patented, operational data retained as know-how, integration code released only where commercially neutral",
+      "status": "unverifiable",
+      "source": null,
+      "vault_text": "Not found in vault — no chunk in company-profile.md describes the project IP-output strategy in these terms.",
+      "issue": "This is a forward-looking statement about the project's IP strategy, not a current fact about ThermaSync. As a commitment it is defensible without a source — but flag for Loch / team confirmation that the strategy described matches the team's actual intent.",
+      "fix_required": false
+    }
+  ],
+  "requirements_coverage": [
+    {
+      "requirement": "Game-changing, world-class innovation",
+      "status": "addressed",
+      "notes": "Framed as a UK-first commercial product combining three elements not previously deployed together; supported by named-incumbent comparison and academic-literature contextualisation."
+    },
+    {
+      "requirement": "Need is clearly defined",
+      "status": "addressed",
+      "notes": "37% UK emissions stat, <3% heat-network share, and ~20% by 2050 CCC scenario establish the policy and emissions gap. Heat Network Zoning + 2025 Regulations create the demand-pull narrative."
+    },
+    {
+      "requirement": "Idea is different from and ahead of already-available solutions (state of art comparison)",
+      "status": "addressed",
+      "notes": "Explicit named-competitor list (Honeywell, JCI, Schneider, Siemens, Trend, Priva, ABB, Tridium) with stated functional differentiator (building-level vs network-level). Independent academic evidence cited."
+    }
+  ],
+  "red_flags_found": [],
+  "red_flag_checks": [
+    {
+      "red_flag": "Vague or generic problem framing",
+      "triggered": false,
+      "notes": "Problem framed with specific named statistics and named regulatory instruments."
+    },
+    {
+      "red_flag": "Failing to differentiate from existing solutions",
+      "triggered": false,
+      "notes": "Named incumbents and explicit 'building-level vs network-level' differentiator."
+    },
+    {
+      "red_flag": "Incremental rather than game-changing positioning",
+      "triggered": false,
+      "notes": "Game-changing framing is present, though the 25% academic comparison sits close to the 23% target — readers could note the absolute magnitudes are similar. Minor narrative risk, not a triggered red flag."
+    }
+  ],
+  "cross_section_conflicts": [],
+  "cross_section_notes": "Only Q4 has been drafted; cross-section consistency cannot be checked yet. The draft defers the £340m TAM (Frontier Economics, 2023) to Q6, the £7.6m Net Zero Heat precedent to Q5, and CO2 quantification to Q7 — these deferrals will need to be honoured when those sections are drafted to avoid inconsistency.",
+  "summary": {
+    "total_claims": 22,
+    "verified": 14,
+    "verified_with_minor_addition_or_simplification": 2,
+    "overstated": 5,
+    "number_mismatch": 1,
+    "hallucinations": 0,
+    "wrong_source": 0,
+    "retroactively_sourced": 0,
+    "unverifiable_but_flagged": 1,
+    "requirements_missing": 0,
+    "red_flags_triggered": 0
+  }
+}

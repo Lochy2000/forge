@@ -177,10 +177,14 @@ def retrieve_style_examples(
     grant_scheme: str | None = None,
     collection=None
 ) -> list[dict]:
-    """Writing and editing agent: how good grants write a specific section."""
+    """Writing and editing agent: how good grants write a specific section.
+
+    Note: section_hint is intentionally excluded from the filter here.
+    Section tagging at ingestion is imperfect — semantic search handles
+    section relevance more reliably than metadata filtering for style examples.
+    """
     where = _build_where(
         {"is_style_example": "true"},
-        {"section_hint": section} if section else None,
         {"grant_scheme": grant_scheme} if grant_scheme else None,
     )
     search_query = query or f"grant writing style example {section or 'application section'}"

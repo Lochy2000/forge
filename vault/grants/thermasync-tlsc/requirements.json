@@ -1,0 +1,153 @@
+{
+  "grant_name": "Innovate UK Smart Grants — November 2024 round",
+  "funder": "Innovate UK",
+  "grant_scheme": "innovate_uk",
+  "approval": {
+    "status": "approved",
+    "approved_by": "Loch",
+    "approved_date": "2026-06-08",
+    "sections_approved": ["Q4", "Q5", "Q6", "Q7", "Q8", "Q9"],
+    "notes": "All six sections accepted as edited; final patches applied 2026-06-08 — Q4 C17 ScienceDirect title restored, Q6 Sheffield conversion-clause sentence added, Q7 DESNZ peak/off-peak worked example replaces earlier ~120 t with ~257 t per deployment, Q9 finance closeouts (salary bands, AE scope, £40k split, Okafor PM reconciliation). Cross-application read-through required as final pipeline step."
+  },
+  "deadline": "",
+  "funding_range": "£100,000–£500,000 (single applicant, 6–18 months); up to £1,000,000 (collaborative, 19–24 months)",
+  "funding_percentage": "45% for SME experimental development",
+  "duration_limit": "6–18 months (single) or 19–24 months (collaborative)",
+  "project_size": "single_applicant",
+  "target_cost": "400000-500000",
+  "eligibility": [
+    "SME — the 45% experimental development rate is the SME rate, so SME status is implied as the intended applicant profile",
+    "Project duration must fall within 6–18 months (single) or 19–24 months (collaborative); anything outside these bounds is ineligible",
+    "Project total cost must fall within the stated funding bands (£100k–£500k single, up to £1m collaborative)",
+    "NOTE: brief does not explicitly state UK-registration, lead-applicant, or sector restrictions — standard Innovate UK Smart Grant rules likely apply but are not in the supplied text"
+  ],
+  "sections": [
+    {
+      "name": "Q4 — Your idea and innovation",
+      "section_hint": "innovation",
+      "approval_status": "approved",
+      "approved_date": "2026-06-08",
+      "word_limit": 600,
+      "appendix": "2-page PDF appendix permitted",
+      "scoring_weight": "",
+      "key_requirements": [
+        "Game-changing, world-class innovation",
+        "Need is clearly defined",
+        "Idea is different from and ahead of already-available solutions (state of art comparison)"
+      ],
+      "red_flags": [
+        "Vague or generic problem framing",
+        "Failing to differentiate from existing solutions",
+        "Incremental rather than game-changing positioning"
+      ]
+    },
+    {
+      "name": "Q5 — Justification for funding",
+      "section_hint": "funding_justification",
+      "approval_status": "approved",
+      "approved_date": "2026-06-08",
+      "word_limit": 400,
+      "scoring_weight": "",
+      "key_requirements": [
+        "Evidence the applicant has researched the match between their needs and Smart grant readiness",
+        "Clear counterfactual: what happens to the project without this funding"
+      ],
+      "red_flags": [
+        "No counterfactual — implying the project would proceed unchanged without funding",
+        "Treating the grant as topping up routine company spend rather than enabling specific R&D"
+      ]
+    },
+    {
+      "name": "Q6 — Target market and commercialisation",
+      "section_hint": "commercialisation",
+      "approval_status": "approved",
+      "approved_date": "2026-06-08",
+      "word_limit": 400,
+      "scoring_weight": "",
+      "key_requirements": [
+        "Strong understanding of potential markets",
+        "Demonstrated business skills and planning",
+        "Target market and customer base clearly researched and defined"
+      ],
+      "red_flags": [
+        "Vague or oversized TAM with no segmentation",
+        "No identified initial customer segment",
+        "Missing business-model / route-to-market detail"
+      ]
+    },
+    {
+      "name": "Q7 — Impact and benefits",
+      "section_hint": "impact",
+      "approval_status": "approved",
+      "approved_date": "2026-06-08",
+      "word_limit": 600,
+      "scoring_weight": "",
+      "key_requirements": [
+        "Considerable positive impact for the organisations involved AND the wider economy",
+        "Coverage of jobs, market share, productivity",
+        "Coverage of regional benefit",
+        "Coverage of societal and environmental impact"
+      ],
+      "red_flags": [
+        "Impact stated only at company level with no wider economic story",
+        "Unsupported numerical claims (jobs, market share) with no methodology"
+      ]
+    },
+    {
+      "name": "Q8 — Delivering your project",
+      "section_hint": "project_management",
+      "approval_status": "approved",
+      "approved_date": "2026-06-08",
+      "word_limit": 400,
+      "appendix": "2-page project plan PDF + 2-page risk register PDF",
+      "scoring_weight": "",
+      "key_requirements": [
+        "Strong and capable team with capacity to deliver complex R&D",
+        "Realistic plans with explicit mitigation strategies",
+        "Project plan PDF and risk register PDF attached"
+      ],
+      "red_flags": [
+        "Team lacks named individuals or credentials for the work",
+        "Risks listed without mitigations",
+        "Unrealistic or back-loaded delivery plan"
+      ]
+    },
+    {
+      "name": "Q9 — Value for money",
+      "section_hint": "finance",
+      "approval_status": "approved",
+      "approved_date": "2026-06-08",
+      "word_limit": 400,
+      "scoring_weight": "",
+      "key_requirements": [
+        "Costs are commensurate with the work being carried out",
+        "Evidence of how best value for money has been calculated",
+        "Quotation comparison provided where relevant"
+      ],
+      "red_flags": [
+        "Round-number costs with no breakdown",
+        "No quotation comparison on subcontracted or capital items where relevant",
+        "Disproportionate allocation to overheads or non-R&D activity"
+      ]
+    }
+  ],
+  "evidence_needed": [
+    "State-of-the-art / competitor comparison (Q4)",
+    "Clear problem definition with sources (Q4)",
+    "Counterfactual narrative — what happens without funding (Q5)",
+    "Match between company stage and Smart grant readiness (Q5)",
+    "Market sizing with source (Q6)",
+    "Defined customer segments and route to market (Q6)",
+    "Quantified jobs / productivity / market-share impact with methodology (Q7)",
+    "Regional impact narrative (Q7)",
+    "Environmental impact quantification (Q7)",
+    "Team CVs / named individuals with relevant credentials (Q8)",
+    "Project plan PDF (2 pages) (Q8)",
+    "Risk register PDF (2 pages) (Q8)",
+    "Cost breakdown by work package and cost category (Q9)",
+    "Quotation comparison where relevant (Q9)"
+  ],
+  "disqualifiers": [
+    "NOTE: brief does not explicitly list disqualifiers. Standard Innovate UK rules likely apply (retrospective costs ineligible, work must not have started, mandatory attachments must be present) but are not stated in the supplied text — flag to user before submission."
+  ]
+}
